@@ -1,1 +1,1 @@
-[Algorythms & Data Structures Curriculum](/Alg&DataStruct)
+[Algorythms & Data Structures Curriculum](/FreeCodeCampCourses/JS/Alg&DataStruct)
