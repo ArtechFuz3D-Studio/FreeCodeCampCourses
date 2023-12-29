@@ -1,3 +1,3 @@
 # FreeCodeCampCourses
 
-[Javascript](/JS)
+[Javascript](/FreeCodeCampCourses/JS)
