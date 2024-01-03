@@ -1,3 +1,5 @@
+# Responsive Web
+
 [Cat Photo App](/FreeCodeCampCourses/JS/ResponsiveWeb/CatPhotoApp/)
 
-[Cat Photo App](/FreeCodeCampCourses/JS/ResponsiveWeb/CafeMenu/index.html)
+[Cafe Menu](/FreeCodeCampCourses/JS/ResponsiveWeb/CafeMenu/index.html)
