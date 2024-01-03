@@ -1,3 +1,3 @@
-[Algorythms & Data Structures Curriculum Projects](/FreeCodeCampCourses/JS/Alg&DataStruct/)
+[Javascript Algorythms & Data Structures - Curriculum Projects](/FreeCodeCampCourses/JS/Alg&DataStruct/)
 
-[Responsive Web Curriculum Projects](/FreeCodeCampCourses/JS/ResponsiveWeb/)
+[Responsive Web - Curriculum Projects](/FreeCodeCampCourses/JS/ResponsiveWeb/)
