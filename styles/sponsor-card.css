@@ -1,0 +1,41 @@
+/* Sponsor Card Styles */
+.sponsor-card {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    border-radius: 50%; /* Make the image circular */
+}
+
+.sponsor-card h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.sponsor-card p {
+    color: #555;
+}
+
+.sponsor-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sponsor-button:hover {
+    background-color: #0056b3;
+}
