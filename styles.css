@@ -7,14 +7,14 @@ body, h1, h2, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    text-align: center; /* Center the text in the body */
 }
 
 /* Header styles */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 20px 0; /* Increase padding for better visual separation */
 }
 
 nav ul {
@@ -27,9 +27,22 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 /* Main content styles */
@@ -45,13 +58,14 @@ section {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 20px 0; /* Increase padding for better visual separation */
 }
 
 /* General styles */
 h1 {
     color: #333;
+    font-size: 2em; /* Larger font size for the title */
+    padding: 20px 0; /* Padding for the title */
 }
 
 p {
