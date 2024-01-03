@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     text-align: center; /* Center the text in the body */
+    overflow: hidden
 }
 
 /* Header styles */
@@ -85,4 +86,5 @@ p {
     width: auto;
     padding: 0;
     border: 0;
+    overflow: hidden;
 }
