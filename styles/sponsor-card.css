@@ -10,6 +10,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.sponsor-card:hover {
+     background-color: #0056b3;
+    border: 2px solid #ddd;
+}
+
 .sponsor-card img {
     max-width: 100%;
     border-radius: 50%; /* Make the image circular */
