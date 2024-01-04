@@ -3,12 +3,11 @@
     text-align: center;
     max-width: 400px;
     margin: 0 auto; /* Center the card horizontally */
-    padding: 15px;
+    padding: 25px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 50vh;
 }
 
 .sponsor-card img {
