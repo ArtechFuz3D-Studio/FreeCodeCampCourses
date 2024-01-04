@@ -8,9 +8,9 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     text-align: center; /* Center the text in the body */
-   overflow: hidden;
         display: flex;
     flex-direction: column;
+     overflow-y: scroll; /* Enable vertical scrolling for the main content */
 }
 
 /* Header styles */
@@ -52,7 +52,7 @@ nav a:hover {
 main {
     padding: 20px;
      flex: 1; /
-     overflow-y: auto; /* Enable vertical scrolling for the main content */
+     overflow-y: scroll; /* Enable vertical scrolling for the main content */
     height: 100vh; /* Set the height of the main content to 100% of the viewport height */
 }
 }
