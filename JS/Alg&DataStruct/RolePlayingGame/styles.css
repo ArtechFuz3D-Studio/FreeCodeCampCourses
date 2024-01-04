@@ -44,9 +44,9 @@ button {
   border: 3px solid #feac32;
 }
 .bg {
+  display: flex;
   padding: 0;
   height: 100%;
   width: 100%;
   margin: auto;
-  position: absolute;
   z-index: -1;
