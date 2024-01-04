@@ -117,4 +117,5 @@ a {
     color: brown;
   }
 .heroimg {
-    display: flex
+    display: flex;
+    margin: auto;
