@@ -11,9 +11,8 @@
 }
 
 .sponsor-card:hover {
-     background-color: #0056b3;
-    border: 2px solid #ddd;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    x-index: -0.5px;
 }
 
 .sponsor-card img {
