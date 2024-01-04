@@ -101,3 +101,18 @@ hr {
     border-color: brown;
     margin: 35px
   }
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: brown;
+  }
