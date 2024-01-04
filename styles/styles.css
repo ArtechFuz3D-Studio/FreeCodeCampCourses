@@ -116,3 +116,5 @@ a {
   a:active {
     color: brown;
   }
+.heroimg {
+    display: flex
