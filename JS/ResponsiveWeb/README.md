@@ -17,3 +17,4 @@
 
 ## Module 2
 
+[Rothko Painting](/FreeCodeCampCourses//JS//ResponsiveWeb/RothkoPainting/index.html)
