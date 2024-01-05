@@ -18,3 +18,5 @@
 ## Module 2
 
 [Rothko Painting](/FreeCodeCampCourses//JS//ResponsiveWeb/RothkoPainting/index.html)
+
+[Flexbox Photo Gallery](/FreeCodeCampCourses//JS//ResponsiveWeb/FlexboxPhotoGallery/index.html)
