@@ -1,6 +1,7 @@
 # Responsive Web
 
-## Module 1
+## Module 1 
+*completed*
 
 [Cat Photo App](/FreeCodeCampCourses/JS/ResponsiveWeb/CatPhotoApp/)
 
@@ -12,9 +13,7 @@
 
 [Survey Form](/FreeCodeCampCourses//JS//ResponsiveWeb/SurveyForm/index.html)
 
-
-*completed*
+---
 
 ## Module 2
 
-...
