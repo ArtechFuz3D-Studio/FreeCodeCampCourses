@@ -55,7 +55,7 @@ main {
      overflow-y: scroll; /* Enable vertical scrolling for the main content */
     height: 100vh; /* Set the height of the main content to 100% of the viewport height */
 }
-}
+
 
 section {
     margin-bottom: 10px;
@@ -66,9 +66,9 @@ section {
 /* Footer styles */
 footer {
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     padding: 20px 0; /* Increase padding for better visual separation */
-
+    
 }
 
 /* General styles */
