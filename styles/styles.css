@@ -8,7 +8,9 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     text-align: center; /* Center the text in the body */
-    overflow: hidden
+        display: flex;
+    flex-direction: column;
+  
 }
 
 /* Header styles */
@@ -49,10 +51,16 @@ nav a:hover {
 /* Main content styles */
 main {
     padding: 20px;
+     flex: 1; /
+     overflow-y: scroll; /* Enable vertical scrolling for the main content */
+    height: 100vh; /* Set the height of the main content to 100% of the viewport height */
+}
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
 }
 
 /* Footer styles */
@@ -60,6 +68,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0; /* Increase padding for better visual separation */
+
 }
 
 /* General styles */
@@ -86,5 +95,29 @@ p {
     width: auto;
     padding: 0;
     border: 0;
-    overflow: hidden;
+
 }
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+    margin: 35px
+  }
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: brown;
+  }
+.heroimg {
+     margin: 0 auto;
