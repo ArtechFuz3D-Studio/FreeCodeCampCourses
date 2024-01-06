@@ -25,4 +25,4 @@
 
 ## Module 3
 
-[Rothko Painting](/FreeCodeCampCourses/JS/ResponsiveWeb/Piano/index.html)
+[Piano](/FreeCodeCampCourses/JS/ResponsiveWeb/Piano/index.html)
