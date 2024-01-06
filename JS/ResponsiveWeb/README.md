@@ -5,24 +5,24 @@
 
 [Cat Photo App](/FreeCodeCampCourses/JS/ResponsiveWeb/CatPhotoApp/)
 
-[Cafe Menu](/FreeCodeCampCourses/JS/ResponsiveWeb/CafeMenu/index.html)
+[Cafe Menu](/FreeCodeCampCourses/JS/ResponsiveWeb/CafeMenu)
 
-[Colored Markers](/FreeCodeCampCourses/JS/ResponsiveWeb/ColoredMarkers/index.html)
+[Colored Markers](/FreeCodeCampCourses/JS/ResponsiveWeb/ColoredMarkers)
 
-[Registration Form](/FreeCodeCampCourses/JS/ResponsiveWeb/RegistrationForm/index.html)
+[Registration Form](/FreeCodeCampCourses/JS/ResponsiveWeb/RegistrationForm)
 
-[Survey Form](/FreeCodeCampCourses/JS/ResponsiveWeb/SurveyForm/index.html)
+[Survey Form](/FreeCodeCampCourses/JS/ResponsiveWeb/SurveyForm)
 
 ---
 
 ## Module 2
 
-[Rothko Painting](/FreeCodeCampCourses/JS/ResponsiveWeb/RothkoPainting/index.html)
+[Rothko Painting](/FreeCodeCampCourses/JS/ResponsiveWeb/RothkoPainting)
 
-[Flexbox Photo Gallery](/FreeCodeCampCourses/JS/ResponsiveWeb/FlexboxPhotoGallery/index.html)
+[Flexbox Photo Gallery](/FreeCodeCampCourses/JS/ResponsiveWeb/FlexboxPhotoGallery)
 
 ----
 
 ## Module 3
 
-[Piano](/FreeCodeCampCourses/JS/ResponsiveWeb/Piano/index.html)
+[Piano](/FreeCodeCampCourses/JS/ResponsiveWeb/Piano)
