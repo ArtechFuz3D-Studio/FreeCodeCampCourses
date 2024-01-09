@@ -21,6 +21,8 @@
 
 [Flexbox Photo Gallery](/FreeCodeCampCourses/JS/ResponsiveWeb/FlexboxPhotoGallery)
 
+[Typography Nutrition Label](/FreeCodeCampCourses/JS/ResponsiveWeb/NutritionLabel)
+
 ----
 
 ## Module 3
