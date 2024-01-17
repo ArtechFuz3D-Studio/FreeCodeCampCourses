@@ -2,4 +2,4 @@
 
 ## Web Audio API
 
-[Cat Photo App](/FreeCodeCampCourses/JS/MozillaDev/Synth/)
+[Synth](/FreeCodeCampCourses/JS/MozillaDev/Synth/)
