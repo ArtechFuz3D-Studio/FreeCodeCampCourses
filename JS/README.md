@@ -6,4 +6,4 @@
 
 [Mozilla Developers Material](/FreeCodeCampCourses/JS/MozillaDev/)
 
-[FCC - Youtube Lessons](/FreeCodeCampCourses/JS/YTLessons/)
+[FCC - Youtube Courses](/FreeCodeCampCourses/JS/YTCourses/)

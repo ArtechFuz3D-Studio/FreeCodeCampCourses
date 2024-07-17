@@ -1,5 +1,5 @@
 # Javascript Game Dev Course
 
-[Lesson 01](/Lesson1/)
+[Frank Labs Game Course](/FrankLabsCourse/)
 
 [Home](/FreeCodeCampCourses/#home)
