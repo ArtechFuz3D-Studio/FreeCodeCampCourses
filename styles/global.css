@@ -39,6 +39,7 @@ nav a:hover {
     box-sizing: border-box;
     border-style: groove;
     overflow: hidden;
+    z-index: 1000;
 }
 
 .sidebar.open {
@@ -59,22 +60,33 @@ nav a:hover {
 }
 
 .edible-content {
-    flex: 1;
-    margin-left: 30px; /* Margin to avoid overlapping with sidebar when opened */
-    padding: 20px;
-    transition: margin-left 0.3s ease;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  width: 40px; /* Adjusted to accommodate the icon size */
+  height: 40px; /* Adjusted to accommodate the icon size */
+  padding: 0; /* Removed padding for proper centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 3px solid #3e7072;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: margin-left 0.3s ease;
+  z-index: 1100;
 }
 
-
-
 .hamburger-icon {
-    font-size: 30px;
-    cursor: pointer;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1;
 }
 
 #main-content.open {
-    margin-left: 30vw;
+  margin-left: 30vw;
 }
+
 
 a:link {
     color: #862e97; /* or any color you prefer */

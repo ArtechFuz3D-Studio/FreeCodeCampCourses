@@ -84,7 +84,7 @@ p {
 
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
-    header nav ul li {
+    header nav ul li .heroimg {
         display: block;
         margin: 10px 0;
     }
