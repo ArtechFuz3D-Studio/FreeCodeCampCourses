@@ -59,6 +59,21 @@ nav a:hover {
     height: auto;
 }
 
+/* Media query for small devices */
+@media (max-width: 768px) {
+  .sidebar {
+      max-width: 50vw;
+  }
+
+  .sidebar.open {
+      width: 50vw;
+  }
+
+  #main-content.open {
+      margin-left: 50vw;
+  }
+}
+
 .edible-content {
   position: fixed;
   top: 15px;

@@ -12,9 +12,12 @@
 .controls {
     position: absolute;
     z-index: 10;
-    top: 80px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+    font-weight: 800;
+    width: 350px;
 }
 
 .controls, select, option {
