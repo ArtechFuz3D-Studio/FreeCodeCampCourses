@@ -5,6 +5,14 @@ dropdown.addEventListener('change', function(e){
     playerState = e.target.value
 })
 
+document.getElementById('hamburger').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    var mainContent = document.getElementById('main-content');
+    sidebar.classList.toggle('open');
+    mainContent.classList.toggle('open');
+});
+
+
 const canvas = document.getElementById('canvas1')
 const ctx = canvas.getContext('2d')
 
