@@ -36,7 +36,8 @@
     <!-- Navigation bar -->
     <header>
         <nav>
-            <ul>
+            <div class="burger-icon" id="burger-icon">&#9776;</div>
+            <ul id="nav-menu">
                 <li><a href="../../../index.html">Home</a></li>
                 <li><a href="./Part01/index.html">Part 01</a></li>
                 <li><a href="./Part02/index.html">Part 02</a></li>
@@ -48,7 +49,6 @@
 
                 <li><a href="../../../Contact/index.html">Contact</a></li>
                
-                <!-- Add more navigation links as needed -->
             </ul>
         </nav>
     </header>
@@ -56,38 +56,20 @@
     <!-- Main content area -->
     <main>
 
-                <!-- Sponsor Me Card Section -->
-                <section>
-                    <img src="../../../public/Blappy.png" alt="Page Logo">
-                </section>
-                <hr />
+        <!-- Hero Section -->
+        <section class="heroimg">
+            <img src="../../../public/hero.png" alt="Sponsor Logo">
+        </section>
+        <hr />
+
         <!-- Sponsor Me Card Section -->
         <section class="sponsor-card">
             <img src="../../../public/coffeme.jpg" alt="Sponsor Logo">
             <h2>Buy me a <strong>coffee</strong></h2>
             <p>Support my journey and become a sponsor. Your contribution makes a difference!</p>
-            <a href="https://beacons.ai/artechfuz3d">
-            <button class="sponsor-button">Coffeme</button>
-                </a>
+            <a href="https://beacons.ai/artechfuz3d"><button class="sponsor-button">Coffeme</button></a>
         </section>
 
-        <!-- Add more sections for different pages of your app -->
-        <!-- <section>
-            <script>
-                // Your JavaScript code
-                import { Application } from '@splinetool/runtime';
-        
-                document.addEventListener('DOMContentLoaded', function () {
-                    const canvas = document.getElementById('canvas3d');
-                    const app = new Application(canvas);
-                    app.load('https://prod.spline.design/6QfaZTYzUeubu3sp/scene.splinecode');
-                });
-            </script>
-        </section> -->
-<!-- 
-        <section class="iframe">
-            <iframe src='https://my.spline.design/untitledcopycopycopycopy-c8a801da4d670d7b18759678f6d566e0/' frameborder='0' width='100%' height='100%'></iframe>
-        </section> -->
     </main>
 
     <!-- Footer -->
@@ -96,9 +78,16 @@
     </footer>
 
     <!-- Scripts -->
-<!--     <script src="scripts/main.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('burger-icon');
+            const navMenu = document.getElementById('nav-menu');
 
-    <!-- Add any additional scripts as needed -->
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 

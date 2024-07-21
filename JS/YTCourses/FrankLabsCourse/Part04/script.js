@@ -31,12 +31,12 @@ class Explosion {
     //Audio
     this.sound = new Audio()
     this.sound2 = new Audio()
-    this.sound2.src = '../../../../public/roll4.wav'
-    // this.sound.src = '../../../../public/roll.wav'
+    this.sound2.src = '../../../../public/roll3.wav'
+    this.sound.src = '../../../../public/roll.wav'
   }
   update() {
-    // if (this.frame === 0) this.sound.play() && this.sound2.play()
-    if (this.frame === 0) this.sound2.play()
+    if (this.frame === 0) this.sound.play() && this.sound2.play()
+    // if (this.frame === 0) this.sound2.play()
     this.timer++;
     if (this.timer % 10 === 0) {
       this.frame++;

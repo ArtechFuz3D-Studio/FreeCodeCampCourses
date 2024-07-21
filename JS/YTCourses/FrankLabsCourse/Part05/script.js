@@ -19,7 +19,7 @@ collisionCanvas.height = window.innerHeight;
 
 let score = 0;
 let gameOver = false;
-ctx.font = "50px Impact";
+ctx.font = "50px Alata";
 
 let timeToNextRaven = 0;
 let ravenInterval = 600;
@@ -117,7 +117,7 @@ class Explosion {
     this.y = y;
     this.frame = 0;
     this.sound = new Audio();
-    this.sound.src = "../../../../public/roll4.wav";
+    this.sound.src = "../../../../public/roll3.wav";
    
     this.timeSinceLastFrame = 0;
     this.frameInterval = 150;
@@ -199,7 +199,7 @@ function drawGameOver() {
 }
 
 window.addEventListener("click", function (e) {
-  const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1);
+  const detectPixelColor = collisionCtx.getImageData(e.x, e.y -20, 1, 1);
   const pc = detectPixelColor.data;
   ravens.forEach((object) => {
     if (

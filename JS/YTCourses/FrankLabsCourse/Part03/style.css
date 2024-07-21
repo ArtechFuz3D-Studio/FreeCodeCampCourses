@@ -1,9 +1,10 @@
 #canvas1 {
+    background-color: blanchedalmond;
     border: 3px solid rgb(255, 255, 255);
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 1000px;
-    width: 500px;
+    height: 800px;
+    width: 400px;
 }

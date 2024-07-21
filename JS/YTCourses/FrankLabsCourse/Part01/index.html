@@ -7,10 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Part 01 - Sprite Animations</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../../../styles/styles.css" />
+
     <link rel="stylesheet" href="../../../../styles/global.css" />
 
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="burger-icon" id="burger-icon">&#9776;</div>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Back</a></li>
+                <li><a href="../Part02/index.html">Next</a></li>
+               
+            </ul>
+        </nav>
+    </header>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-content">
             <h1>Sprite Animation</h1>
@@ -24,7 +36,7 @@
             </p>
         </div>
         <footer>
-            <p>&copy; 2024 ArtechFuz3D. All rights reserved.</p>
+            <p class="sidefoot">&copy; 2024 ArtechFuz3D. All rights reserved.</p>
         </footer>
     </div>
     <div class="edible-content" id="main-content">
@@ -51,5 +63,20 @@
     </div>
     <script src="./script.js" ></script>
     
+
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('burger-icon');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+
 </body>
+
 </html>

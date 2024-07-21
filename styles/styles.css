@@ -1,34 +1,42 @@
-/* Reset some default styles */
+/* Reset some default styles ?this is the correct css */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
-
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Alata', sans-serif;
+    line-height: 1.5;
     text-align: center; /* Center the text in the body */
         display: flex;
     flex-direction: column;
-  
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box; 
 }
+
 
 /* Header styles */
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0; /* Increase padding for better visual separation */
+    padding: 10px 0; /* Increase padding for better visual separation */
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 97;
 }
-
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 nav ul {
     list-style: none;
 }
-
 nav ul li {
     display: inline-block;
     margin-right: 20px;
 }
-
 nav a {
     color: #333;
     text-decoration: none;
@@ -42,34 +50,48 @@ nav a {
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
-
 nav a:hover {
     background-color: #333;
     color: #fff;
 }
+.burger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 /* Main content styles */
 main {
-    padding: 20px;
-     flex: 1; /
-     overflow-y: scroll; /* Enable vertical scrolling for the main content */
-    height: 100vh; /* Set the height of the main content to 100% of the viewport height */
+    width: 100%; /* Ensure the main content takes up full width */
+    /* padding: 20px;  */ /*this creates a white bar on the right*/
+    flex: 1;
+    overflow-x: hidden; /* Prevent horizontal scrolling for the main content */
+    height: calc(100vh - 60px); /* Set the height of the main content to 100% of the viewport height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
-
-
 section {
     margin-bottom: 10px;
     margin-top: 10px;
+    /* overflow-x: hidden;
+    flex-direction: column; */
     
+}
+/* Page Footer styles - not sidebar footer */
+.pagefooter {
+    background-color: #000000; /* Footer background color */
+    color: white; /* Footer text color */
+    font-size: large;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 2px;
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
 }
 
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: #ffffff;
-    padding: 20px 0; /* Increase padding for better visual separation */
-    
-}
 
 /* General styles */
 h1 {
@@ -77,29 +99,52 @@ h1 {
     font-size: 2em; /* Larger font size for the title */
     padding: 20px 0; /* Padding for the title */
 }
-
 p {
     color: #555;
 }
-
 /* Responsive styles */
-@media only screen and (max-width: 600px) {
-    header nav ul li .heroimg {
-        display: block;
+@media only screen and (max-width: 900px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
         margin: 10px 0;
     }
-}
 
-.iframe {
+    nav ul li a {
+        color: #fff;
+        border: none;
+        background: none;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+}
+/* .iframe {
     height: 100vh;
     width: auto;
     padding: 0;
     border: 0;
-
-}
-
+} */
 hr {
-    height: 2px;
+    height: 4px;
     background-color: brown;
     border-color: brown;
     margin: 35px
@@ -119,6 +164,23 @@ a {
   a:active {
     color: brown;
   }
-.heroimg {
-     margin: 0 auto;
+/* General styles for hero image */
+.heroimg img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline spacing */
 }
+
+/* Responsive styles for hero image on smaller devices */
+@media only screen and (max-width: 900px) {
+    .heroimg {
+        flex-direction: column;
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden; /* Prevent overflow */
+    }
+}
+@media only screen and (max-width: 900px) {
+    main {
+       width: fit-content;
+    }}
