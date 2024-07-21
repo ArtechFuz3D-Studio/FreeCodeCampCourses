@@ -36,6 +36,7 @@ class Enemy {
         this.interval = Math.floor(Math.random() * 200 + 50)
     }
     update(){
+        
         if (gameFrame % this.interval === 0){
             this.newX = Math.random() * (canvas.width - this.width)
             this.newY = Math.random() * (canvas.height - this.height)

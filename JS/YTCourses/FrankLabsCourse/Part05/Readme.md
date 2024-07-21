@@ -1,10 +1,12 @@
-# Part 03 - NPC Movement Animations
+# Part 05 - Point Shooter
 
+```html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GFO_txvwK_c?si=Ke_hN-gXTV42yetO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 
 Part A
 
-`
+```js
 /**
  * @type {HTMLCanvasElement}
  */
@@ -80,9 +82,11 @@ function animate(){
     requestAnimationFrame(animate)
 }
 animate()
-`
+```
+
 Part B
-`
+
+```js
 /**
  * @type {HTMLCanvasElement}
  */
@@ -161,10 +165,11 @@ function animate(){
     requestAnimationFrame(animate)
 }
 animate()
-`
+```
+
 Part C
 
-`
+```js
 /**
  * @type {HTMLCanvasElement}
  */
@@ -252,10 +257,10 @@ function animate(){
     requestAnimationFrame(animate)
 }
 animate()
-`
+```
 Part D
 
-`
+```js
 /**
  * @type {HTMLCanvasElement}
  */
@@ -346,4 +351,4 @@ function animate(){
     requestAnimationFrame(animate)
 }
 animate()
-`
+```

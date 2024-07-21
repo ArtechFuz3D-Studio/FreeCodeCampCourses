@@ -1,4 +1,4 @@
-# Enemy Types
+# Part 06 - Enemy Types
 
 In this lesson I learned ...
 

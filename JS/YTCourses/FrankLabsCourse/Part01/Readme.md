@@ -1,8 +1,10 @@
-# This course is from
+# Part 01 - Spritesheet Animation
 
+```html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GFO_txvwK_c?si=Ke_hN-gXTV42yetO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 
-`
+```js
 const canvas = document.getElementById('canvas1')
 const ctx = canvas.getContext('2d')
 
@@ -75,9 +77,9 @@ function animate(){
 //call the function
 animate()
 
-`
+```
 
-`
+```js
 spriteAnimations = [
     "idle" = {
         width:525,
@@ -107,4 +109,4 @@ spriteAnimations = [
 
 console.log(spriteAnimations["idle"].loc[2].x) // 1150
 console.log(spriteAnimations["idle"].loc.length) // =7
-`
+```
