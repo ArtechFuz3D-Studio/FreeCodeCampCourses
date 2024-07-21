@@ -13,7 +13,7 @@ canvas {
 margin-top: 50px;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 1900;
     /* background-color: aliceblue; */
 }
 

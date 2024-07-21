@@ -2,13 +2,14 @@
  * @type {HTMLCanvasElement}
  */
 
-const canvas = document.getElementById("canvas1");
+window.addEventListener('load', function(){
+  const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d", {
   // willReadFrequently: true
 });
 const collisionCanvas = document.getElementById("collisionCanvas");
 const collisionCtx = collisionCanvas.getContext("2d", {
-  // willReadFrequently: true,
+  willReadFrequently: true,
 });
 
 // Sizes
@@ -199,6 +200,9 @@ function drawGameOver() {
 }
 
 window.addEventListener("click", function (e) {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
   const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1);
   const pc = detectPixelColor.data;
   ravens.forEach((object) => {
@@ -214,6 +218,14 @@ window.addEventListener("click", function (e) {
     }
   });
 });
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  collisionCanvas.width = window.innerWidth;
+  collisionCanvas.height = window.innerHeight;
+});
+
 
 function animate(timestamp) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -241,3 +253,5 @@ function animate(timestamp) {
   else drawGameOver();
 }
 animate(0);
+
+})
