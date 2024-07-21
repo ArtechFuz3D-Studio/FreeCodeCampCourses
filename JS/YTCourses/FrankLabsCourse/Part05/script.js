@@ -199,7 +199,7 @@ function drawGameOver() {
 }
 
 window.addEventListener("click", function (e) {
-  const detectPixelColor = collisionCtx.getImageData(e.x, e.y -20, 1, 1);
+  const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1);
   const pc = detectPixelColor.data;
   ravens.forEach((object) => {
     if (
