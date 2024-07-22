@@ -23,7 +23,7 @@ class Explosion {
     this.x = x 
     this.y = y 
     this.image = new Image();
-    this.image.src = "/boom.png";
+    this.image.src = "../../../../../public/boom.png";
     this.frame = 0;
     this.timer = 0;
     this.angle = Math.random() * 6.2
@@ -31,8 +31,8 @@ class Explosion {
     //Audio
     this.sound = new Audio()
     this.sound2 = new Audio()
-    this.sound2.src = '/roll2.wav'
-    this.sound.src = '/roll.wav'
+    this.sound2.src = '../../../../../public/roll2.wav'
+    this.sound.src = '../../../../../public/roll.wav'
   }
   update() {
     if (this.frame === 0) this.sound.play() && this.sound2.play()

@@ -22,7 +22,7 @@ const CANVAS_HEIGHT = canvas.height = 600
 
 // Sprite
 const playerImage = new Image()
-playerImage.src = '/shadow_dog.png'
+playerImage.src = '../../../../../public/shadow_dog.png'
 const spriteWidth = 575
 const spriteHeight = 523
 
