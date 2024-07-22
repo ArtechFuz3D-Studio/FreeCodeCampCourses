@@ -5,7 +5,7 @@
 window.addEventListener('load', function(){
   const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d", {
-  // willReadFrequently: true
+  willReadFrequently: true
 });
 const collisionCanvas = document.getElementById("collisionCanvas");
 const collisionCtx = collisionCanvas.getContext("2d", {
@@ -41,7 +41,7 @@ class Raven {
     this.markedForDeletion = false;
 
     this.image = new Image();
-    this.image.src = "../../../../public/raven.png";
+    this.image.src = "/public/raven.png";
     this.frame = 0;
     this.maxFrame = 4;
     this.timeSinceFlap = 0;
@@ -110,7 +110,7 @@ let explosions = [];
 class Explosion {
   constructor(x, y, size) {
     this.image = new Image();
-    this.image.src = "../../../../public/boom.png";
+    this.image.src = "/public/boom.png";
     this.spriteWidth = 200;
     this.spriteHeight = 179;
     this.size = size;
@@ -118,7 +118,7 @@ class Explosion {
     this.y = y;
     this.frame = 0;
     this.sound = new Audio();
-    this.sound.src = "../../../../public/roll3.wav";
+    this.sound.src = "/public/roll3.wav";
    
     this.timeSinceLastFrame = 0;
     this.frameInterval = 150;
@@ -219,12 +219,7 @@ window.addEventListener("click", function (e) {
   });
 });
 
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  collisionCanvas.width = window.innerWidth;
-  collisionCanvas.height = window.innerHeight;
-});
+
 
 
 function animate(timestamp) {
