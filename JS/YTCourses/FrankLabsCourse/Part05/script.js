@@ -11,7 +11,7 @@ window.addEventListener('load', function(){
 const ctx = canvas.getContext("2d", {
   willReadFrequently: true
 });
-
+})
 // Sizes
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -249,4 +249,3 @@ function animate(timestamp) {
 }
 animate(0);
 
-})
