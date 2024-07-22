@@ -23,6 +23,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        js: resolve(__dirname, 'src/JS/index.html'),
+        mozillaDev: resolve(__dirname, 'src/JS/MozillaDev/index.html'),
+        responsiveWeb: resolve(__dirname, 'src/JS/ResponsiveWeb/index.html'),
+        algDataStruct: resolve(__dirname, 'src/JS/Alg&DataStruct/index.html'),
+        ytCourses: resolve(__dirname, 'src/JS/YTCourses/index.html'),
+        ytCoursesFrankLabsCourse: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/index.html'),
         mozillaDevSynth: resolve(__dirname, 'src/JS/MozillaDev/Synth/index.html'),
         responsiveWebCafeMenu: resolve(__dirname, 'src/JS/ResponsiveWeb/CafeMenu/index.html'),
         responsiveWebCatPhotoApp: resolve(__dirname, 'src/JS/ResponsiveWeb/CatPhotoApp/index.html'),
