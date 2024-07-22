@@ -23,7 +23,7 @@ header {
     top: 0;
     display: flex;
     justify-content: center;
-    z-index: 97;
+    z-index: 101;
 }
 nav {
     display: flex;
@@ -36,6 +36,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-right: 20px;
+
 }
 nav a {
     color: #333;
@@ -49,6 +50,7 @@ nav a {
     background-color: #fff;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
+
 }
 nav a:hover {
     background-color: #333;

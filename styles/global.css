@@ -23,7 +23,7 @@ nav a:hover {
   box-sizing: border-box;
   border-style: groove;
   overflow: hidden;
-  z-index: 98;
+  z-index: 101;
 }
 .sidebar.open {
   left: 0;

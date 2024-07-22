@@ -1,15 +1,15 @@
 /**
  * @type {HTMLCanvasElement}
  */
+const collisionCanvas = document.getElementById("collisionCanvas");
+const collisionCtx = collisionCanvas.getContext("2d", {
+  willReadFrequently: true,
+});
 
 window.addEventListener('load', function(){
   const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d", {
   willReadFrequently: true
-});
-const collisionCanvas = document.getElementById("collisionCanvas");
-const collisionCtx = collisionCanvas.getContext("2d", {
-  willReadFrequently: true,
 });
 
 // Sizes
