@@ -2,6 +2,6 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/', // set the base path
+  base: '/FreeCodeCampCourses/', // set the base path
   // other configurations
 })
