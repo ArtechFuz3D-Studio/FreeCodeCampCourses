@@ -2,7 +2,7 @@
  * @type {HTMLCanvasElement}
  */
 
-window.addEventListener("load", function () {
+document.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d", {
     willReadFrequently: true,
