@@ -13,7 +13,8 @@ export default defineConfig({
     include: [
       // include all .js, .ts files
       'src/**/*.js',
-      'src/**/*.ts',
+
+      // 'src/**/*.ts',
     ],
   },
   server: {
