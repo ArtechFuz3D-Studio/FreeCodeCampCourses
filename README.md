@@ -1,3 +1,5 @@
+***project is undergoing a refactor, the pages site may be down but you can still browse the project repo and readme's***
+
 # FreeCodeCampCourses
 
 [Javascript](/FreeCodeCampCourses/JS)
