@@ -7,6 +7,10 @@ export default defineConfig({
   // other configurations
 
   resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@assets': resolve(__dirname, 'public'),
+    },
     extensions: ['.js', '.ts'],
   },
   

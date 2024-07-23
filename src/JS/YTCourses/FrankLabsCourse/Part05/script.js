@@ -1,7 +1,7 @@
 /**
  * @type {HTMLCanvasElement}
  */
-
+import raven from '@assets/raven.png'
 window.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d", {
@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
       this.markedForDeletion = false;
 
       this.image = new Image();
-      this.image.src = "FreeCodeCampCourses/raven.png";
+      this.image.src = raven;
       this.frame = 0;
       this.maxFrame = 4;
       this.timeSinceFlap = 0;
