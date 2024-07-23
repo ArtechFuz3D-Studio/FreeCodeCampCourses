@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
       this.markedForDeletion = false;
 
       this.image = new Image();
-      this.image.src = "/raven.png";
+      this.image.src = "FreeCodeCampCourses/raven.png";
       this.frame = 0;
       this.maxFrame = 4;
       this.timeSinceFlap = 0;
@@ -108,7 +108,7 @@ window.addEventListener("load", function () {
   class Explosion {
     constructor(x, y, size) {
       this.image = new Image();
-      this.image.src = "/boom.png";
+      this.image.src = "FreeCodeCampCourses/boom.png";
       this.spriteWidth = 200;
       this.spriteHeight = 179;
       this.size = size;
@@ -116,7 +116,7 @@ window.addEventListener("load", function () {
       this.y = y;
       this.frame = 0;
       this.sound = new Audio();
-      this.sound.src = "/roll.wav";
+      this.sound.src = "FreeCodeCampCourses/roll.wav";
 
       this.timeSinceLastFrame = 0;
       this.frameInterval = 150;
