@@ -2,6 +2,8 @@
  * @type {HTMLCanvasElement}
  */
 import raven from '@assets/raven.png'
+import roll from '@assets/roll.wav'
+import boom from '@assets/boom.png'
 
 window.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
@@ -109,7 +111,7 @@ window.addEventListener("load", function () {
   class Explosion {
     constructor(x, y, size) {
       this.image = new Image();
-      this.image.src = "FreeCodeCampCourses/boom.png";
+      this.image.src = boom;
       this.spriteWidth = 200;
       this.spriteHeight = 179;
       this.size = size;
@@ -117,7 +119,7 @@ window.addEventListener("load", function () {
       this.y = y;
       this.frame = 0;
       this.sound = new Audio();
-      this.sound.src = "FreeCodeCampCourses/roll.wav";
+      this.sound.src = roll;
 
       this.timeSinceLastFrame = 0;
       this.frameInterval = 150;
