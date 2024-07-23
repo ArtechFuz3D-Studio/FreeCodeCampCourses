@@ -1,6 +1,7 @@
 /**
  * @type {HTMLCanvasElement}
  */
+import enemy4 from '@assets/enemy4.png'
 
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
@@ -20,7 +21,7 @@ let gameFrame = 0
 class Enemy {
     constructor(){
         this.image = new Image()
-        this.image.src = '../../../../../public/enemy4.png'
+        this.image.src = enemy4
         this.speed = Math.random() * 4 + 1
         this.spriteWidth = 213
         this.spriteHeight = 213

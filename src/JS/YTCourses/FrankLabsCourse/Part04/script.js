@@ -1,6 +1,10 @@
 /**
  * @type {HTMLCanvasElement}
  */
+import boom from '@assets/boom.png'
+import roll from '@assets/roll.wav'
+import roll2 from '@assets/roll2.wav'
+
 
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
@@ -23,7 +27,7 @@ class Explosion {
     this.x = x 
     this.y = y 
     this.image = new Image();
-    this.image.src = "../../../../../public/boom.png";
+    this.image.src = boom;
     this.frame = 0;
     this.timer = 0;
     this.angle = Math.random() * 6.2
@@ -31,8 +35,8 @@ class Explosion {
     //Audio
     this.sound = new Audio()
     this.sound2 = new Audio()
-    this.sound2.src = '../../../../../public/roll2.wav'
-    this.sound.src = '../../../../../public/roll.wav'
+    this.sound2.src = roll2
+    this.sound.src = roll
   }
   update() {
     if (this.frame === 0) this.sound.play() && this.sound2.play()

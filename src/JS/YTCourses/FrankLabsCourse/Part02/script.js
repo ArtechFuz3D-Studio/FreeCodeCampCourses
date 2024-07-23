@@ -1,3 +1,9 @@
+import Layer1 from '@assets/layer-1.png'
+import Layer2 from '@assets/layer-2.png'
+import Layer3 from '@assets/layer-3.png'
+import Layer4 from '@assets/layer-4.png'
+import Layer5 from '@assets/layer-5.png'
+
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 
@@ -11,15 +17,15 @@ let gameSpeed = 3;
 
 // Initiate background
 const backgroundLayer1 = new Image();
-backgroundLayer1.src = "../../../../../public/layer-1.png";
+backgroundLayer1.src = Layer1;
 const backgroundLayer2 = new Image();
-backgroundLayer2.src = "../../../../../public/layer-2.png";
+backgroundLayer2.src = Layer2;
 const backgroundLayer3 = new Image();
-backgroundLayer3.src = "../../../../../public/layer-3.png";
+backgroundLayer3.src = Layer3;
 const backgroundLayer4 = new Image();
-backgroundLayer4.src = "../../../../../public/layer-4.png";
+backgroundLayer4.src = Layer4;
 const backgroundLayer5 = new Image();
-backgroundLayer5.src = "../../../../../public/layer-5.png";
+backgroundLayer5.src = Layer5;
 
 window.addEventListener("load", function () {
   const slider = document.getElementById("slider");

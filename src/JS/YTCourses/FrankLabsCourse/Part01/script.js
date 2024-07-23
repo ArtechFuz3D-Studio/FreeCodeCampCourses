@@ -1,3 +1,5 @@
+import shadowDog from '@assets/shadow_dog.png'
+
 let playerState = 'idle'
 // Set the animation set when selected in dom
 const dropdown = document.getElementById('animations')
@@ -22,7 +24,7 @@ const CANVAS_HEIGHT = canvas.height = 600
 
 // Sprite
 const playerImage = new Image()
-playerImage.src = 'shadow_dog.png'
+playerImage.src = shadowDog
 const spriteWidth = 575
 const spriteHeight = 523
 

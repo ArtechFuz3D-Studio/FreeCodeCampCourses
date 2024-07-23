@@ -1,4 +1,4 @@
-***project is undergoing a refactor, the pages site may be down but you can still browse the project repo and readme's***
+***project is undergoing a refactor, if the pages site is down but you can still browse the project repo and readme's***
 
 # FreeCodeCampCourses
 
