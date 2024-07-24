@@ -1,0 +1,94 @@
+<!-- type html:5 to generate boiler -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 02 - Parallax Background</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../../../../styles/styles.css" />
+    <link rel="stylesheet" href="../../../../../styles/global.css" />
+  </head>
+  <body>
+    <!-- Styles from styles.css -->
+    <header>
+      <nav>
+        <div class="burger-icon" id="burger-icon">&#9776;</div>
+        <ul id="nav-menu">
+          <li><a href="../../../../index.html">Home</a></li>
+            <li><a href="../">Back</a></li>
+          <li><a href="../Part03/index.html">Next</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Styles from global -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-content">
+        <h1>Parallax Background</h1>
+        <p>In this lesson ...</p>
+
+        <q
+          >Art courtesy of
+          <a href="https://bevouliin.com/category/free_game_asset/"
+            >Bevouliin</a
+          ></q
+        >
+        <!-- <p>
+          <img
+            id="spriteSheet"
+            src="../../../../public/shadow_dog.png"
+            alt="spritesheet"
+          />
+        </p> -->
+      </div>
+      <footer>
+        <p class="sidefoot">&copy; 2024 ArtechFuz3D. All rights reserved.</p>
+      </footer>
+    </div>
+    <div class="edible-content" id="main-content">
+      <div class="hamburger-icon" id="hamburger">&#9776;</div>
+    </div>
+
+    <!-- Styles from ./style.css -->
+    <div id="container">
+      <p>
+        Game Speed:
+        <span id="showGameSpeed"></span>
+      </p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="3"
+        class="slider"
+        id="slider"
+      />
+    </div>
+    <canvas id="canvas1"></canvas>
+    <script type="module" src="./script.js"></script>
+
+    <!-- Scripts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("burger-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        hamburger.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+        });
+      });
+    </script>
+    <script>
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          var sidebar = document.getElementById("sidebar");
+          var mainContent = document.getElementById("main-content");
+          sidebar.classList.toggle("open");
+          mainContent.classList.toggle("open");
+        });
+    </script>
+  </body>
+</html>

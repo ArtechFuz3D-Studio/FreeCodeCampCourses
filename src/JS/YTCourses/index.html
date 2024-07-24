@@ -12,43 +12,44 @@
     <title>ArtechFuz3D - freeCodeCamp Curriculum Projects </title>
 
     <!-- Favicon -->
-    <link rel="icon" href="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/logoswirl.svg" type="image/x-icon">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/sponsor-card.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
+    <link rel="stylesheet" href="../../../styles/sponsor-card.css"> 
+
 
     <!-- Open Graph Image -->
     <meta property="og:image" content="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/hero.png">
     <meta property="og:image:secure_url" content="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/hero.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1080">
 
+    <!-- Add any additional meta tags or stylesheets as needed -->
 </head>
-
 <body>
-
     <!-- Navigation bar -->
     <header>
-        <nav>
-            <div class="burger-icon" id="burger-icon">&#9776;</div>
-            <ul id="nav-menu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/FreeCodeCampCourses/src/JS/index.html">Javascript</a></li>
-                <li><a href="https://portfolio.artechfuz3d.xyz">Portfolio</a></li>
-                <li><a href="/FreeCodeCampCourses/src/Contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="burger-icon" id="burger-icon">&#9776;</div>
+        <ul id="nav-menu">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="./FrankLabsCourse/index.html">Frank Labs Game Course</a></li>
+
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </nav>
     </header>
 
     <!-- Main content area -->
     <main>
-
-        <!-- Hero Section -->
-        <section class="heroimg">
-            <img src="/hero.png" alt="Sponsor Logo">
-        </section>
-        <hr />
+      <!-- Hero Section -->
+      <section class="heroimg">
+        <img src="/hero.png" alt="Page Logo" />
+      </section>
+      <hr />
 
         <!-- Sponsor Me Card Section -->
         <section class="sponsor-card">
@@ -57,26 +58,22 @@
             <p>Support my journey and become a sponsor. Your contribution makes a difference!</p>
             <a href="https://beacons.ai/artechfuz3d"><button class="sponsor-button">Coffeme</button></a>
         </section>
-
-    </main>
-
+</main>
     <!-- Footer -->
-    <footer className="pagefooter">
-        <p>&copy; 2024 ArtechFuz3D. All rights reserved.</p>
+    <footer>
+      <p>&copy; 2024 ArtechFuz3D. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('burger-icon');
-            const navMenu = document.getElementById('nav-menu');
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('burger-icon');
+        const navMenu = document.getElementById('nav-menu');
 
-            hamburger.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
         });
-    </script>
-
-</body>
-
+    });
+</script>
+  </body>
 </html>
