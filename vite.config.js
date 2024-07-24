@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@assets': resolve(__dirname, 'public'),
+      '@assets': resolve(__dirname, 'src/assets'),
     },
     extensions: ['.js', '.ts'],
   },
@@ -61,4 +61,3 @@ export default defineConfig({
   },
 });
 
-// dont @raven bro in commits, it tags users 

@@ -15,3 +15,5 @@
 ### [*Buy me a coffee*](https://beacons.ai/artechfuz3d)
 
 -----
+*To DO*
+test keeping assets in src/assets
