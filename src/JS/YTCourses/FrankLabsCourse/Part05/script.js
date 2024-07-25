@@ -2,7 +2,7 @@
  * @type {HTMLCanvasElement}
  */
 import raven from '@assets/raven.png'
-import roll from '@assets/roll.wav'
+import roll from '@assets/roll.mp3'
 import boom from '@assets/boom.png'
 
 window.addEventListener("load", function () {
