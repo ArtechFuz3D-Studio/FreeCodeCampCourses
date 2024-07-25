@@ -52,6 +52,7 @@ export default defineConfig({
         ytCoursesFrankLabsCoursePart05: resolve(__dirname, '/JS/YTCourses/FrankLabsCourse/Part05/index.html'),
         ytCoursesFrankLabsCoursePart06: resolve(__dirname, '/JS/YTCourses/FrankLabsCourse/Part06/index.html'),
         ytCoursesFrankLabsCoursePart07: resolve(__dirname, '/JS/YTCourses/FrankLabsCourse/Part07/index.html'),
+        ytCoursesFrankLabsCoursePart08: resolve(__dirname, '/JS/YTCourses/FrankLabsCourse/Part08/index.html'),
         contact: resolve(__dirname, '/Contact/index.html')
       }
     }

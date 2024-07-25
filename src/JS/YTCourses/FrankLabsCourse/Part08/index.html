@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Part 07 - Javascript 2D Game</title>
+    <title>Part 08 - Javascript 2D Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../../../../../styles/styles.css" />
     <link rel="stylesheet" href="../../../../../styles/global.css" />
   </head>
   <body>
+    <!-- App Overlay -->
     <header>
       <nav>
         <div class="burger-icon" id="burger-icon">&#9776;</div>
@@ -16,15 +17,18 @@
           <li><a href="../../../../../index.html">Home</a></li>
           <li><a href="../">Back</a></li>
           <li><a href="../Part08/index.html">Next</a></li>
+          <!--  easy reset button -->
           <li><a href="./index.html">Restart</a></li>
         </ul>
       </nav>
     </header>
     <div class="sidebar" id="sidebar">
       <div class="sidebar-content">
-        <h1>Enemy Types</h1>
-        <p>In this lesson</p>
-        <p>Extending classes to create a variety of child classes or enemies</p>
+        <h1>Part 08 - State Design Pattern</h1>
+        <p>In this lesson ...</p>
+        <p>Implementing state design patterns in a side-scroller game</p>
+        <p>using native javascript modules to split our code into multiple parts</p>
+        <p>and much more ...</p>
         <p>
           See github
           <a
@@ -82,24 +86,13 @@
         });
     </script>
 
-    <!-- <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          console.log('DOM fully loaded and parsed');
-          // Your DOM ready code here
-      });
 
-      window.addEventListener('load', function() {
-          console.log('Window fully loaded');
-          // Your window load code here
-      });
-  </script> -->
+<!-- Game -->
     <canvas id="canvas1"></canvas>
-    <img id="playerImage" src="/player.png" />
-    <img id="backgroundImage" src="/background_single.png" />
-    <img id="enemyImage" src="/enemy_1.png" />
-
+    <img id="dogImage" src="dog.png" style="display: none;" />
+    <h1 id="loading">LOADING...</h1>
     <!-- Game UI -->
-    <button id="fullScreenButton">Toggle FullScreen</button>
+    
 
     <script type="module" src="./script.js"></script>
   </body>
