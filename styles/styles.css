@@ -4,14 +4,26 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: "Alata";
+    src: url("/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Blanka";
+    src: url("/fonts/Blanka.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
 /* Reset some default styles ?this is the correct css */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: 'Orbitron', sans-serif;
-    line-height: 1.5;
+    font-family: 'Blanka', sans-serif;
+    /* line-height: 1.5; */
     text-align: center; /* Center the text in the body */
         display: flex;
     flex-direction: column;
@@ -25,11 +37,12 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0; /* Increase padding for better visual separation */
-    position: sticky;
+    position: absolute;
     top: 0;
     display: flex;
     justify-content: center;
     z-index: 101;
+    width: 100%;
 }
 nav {
     display: flex;
@@ -41,7 +54,10 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    /* margin-right: 0px; */
+    padding-left: 20px;
+    padding-right: 20px;
+   
 
 }
 nav a {
@@ -54,7 +70,7 @@ nav a {
     border-radius: 5px;
     margin: 10px;
     background-color: #fff;
-    color: #333;
+
     transition: background-color 0.3s, color 0.3s;
 
 }

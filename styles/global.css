@@ -10,14 +10,21 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Blanka";
+  src: url("/fonts/Blanka.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Blanka', sans-serif;
 }
 /* Global styles for all h1 elements */
 h1 {
   color: #ffffff;
-  /* font-size: 2em; */
-  padding: 20px 0;
+  font-size: 2em;
+  /* padding: 20px 0; */
 }
 
 nav a:hover {
@@ -83,38 +90,45 @@ nav a:hover {
 
 
 .edible-content {
-position: fixed;
-bottom: 30px;
-left: 20px;
-width: 40px; /* Adjusted to accommodate the icon size */
-height: 40px; /* Adjusted to accommodate the icon size */
-padding: 0; /* Removed padding for proper centering */
-display: flex;
-justify-content: center;
-align-items: center;
-background: white;
-border: 3px solid #3e7072;
-border-radius: 10px;
-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-transition: margin-left 0.3s ease;
-z-index: 9999;
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  width: 40px; /* Adjusted to accommodate the icon size */
+  height: 40px; /* Adjusted to accommodate the icon size */
+  padding: 0; /* Removed padding for proper centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #009ca1;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: margin-left 0.3s ease;
+  margin: 0;
+  /* z-index: 9999; */
 }
+
 .hamburger-icon {
-font-size: 30px;
-cursor: pointer;
-line-height: 1;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
 }
 #main-content.open {
 margin-left: 30vw;
 }
 a:link {
-  color: #862e97; /* or any color you prefer */
+  color: #000000; /* or any color you prefer */
   text-decoration: none; /* if you want to remove the underline */
 }
 
 /* Visited link */
 a:visited {
-  color: #862e97; /* or any color you prefer */
+  color: #000000; /* or any color you prefer */
   text-decoration: none; /* if you want to remove the underline */
 }
 
