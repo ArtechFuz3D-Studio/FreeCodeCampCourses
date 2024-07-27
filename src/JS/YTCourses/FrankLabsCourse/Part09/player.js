@@ -12,7 +12,8 @@ import {
 } from "./state";
 
 export default class Player {
-  constructor(gameWidth, gameHeight) {
+  constructor(game, gameWidth, gameHeight) {
+    this.game = game
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.states = [

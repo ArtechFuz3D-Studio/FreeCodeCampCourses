@@ -16,29 +16,22 @@
         <ul id="nav-menu">
           <li><a href="../../../../../index.html">Home</a></li>
           <li><a href="../">Back</a></li>
-          <!-- <li><a href="../Part10/index.html">Next</a></li> -->
-          <!--  easy reset button -->
           <li><a href="./index.html">Restart</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
       <div class="sidebar-content">
         <h1>Part 09 - Game</h1>
-        <p>In this lesson ...</p>
-        <p>Implementing all lessons in a side-scroller game</p>
-
-
-
-        <p>Below is the spritesheet used</p>
-
-        <p>
-          <img
-            id="spriteSheet"
-            src="/dog_left_right_white.png"
-            alt="spritesheet"
-          />
-        </p>
+        <p>In this lesson we build a 2d game and animate everything</p>
+        <p>Responsive Keyboards Controls</p>
+        <p>Animation Spritesheets</p>
+        <p>Parallax Background</p>
+        <p>Game Skins</p>
+        <p>Particle Effects</p>
+        <p>Enemy Variants</p>
         <q
           >Art courtesy of
           <a href="https://bevouliin.com/category/free_game_asset/"
@@ -63,18 +56,11 @@
         >
           <span class="material-symbols-rounded">code</span>
         </a>
-        <!-- <a
-          href="https://"
-          target="_blank"
-          title="Website"
-          class="icon-link"
-        >
-          <span class="material-symbols-rounded">language</span>
-        </a> -->
       </div>
       <footer>
         <p>&copy; 2024 ArtechFuz3D. All rights reserved.</p>
       </footer>
+      <!-- SIDEBAR SCRIPT -->
     </div>
     <div class="edible-content" id="main-content">
       <div class="hamburger-icon" id="hamburger">&#9776;</div>
@@ -89,6 +75,7 @@
         });
       });
     </script>
+    <!-- RESPONSIVE NAV SCRIPT -->
     <script>
       document
         .getElementById("hamburger")
@@ -102,10 +89,10 @@
 
     <!-- Game -->
     <canvas id="canvas1"></canvas>
-    <img id="dogImage" src="/dog_left_right_white.png" />
+    <img id="player" src="/player_1.png" />
     <h1 id="loading">LOADING...</h1>
     <!-- Game UI -->
 
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
