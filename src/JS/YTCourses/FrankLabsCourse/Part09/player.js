@@ -1,64 +1,38 @@
-import {
-  StandingLeft,
-  StandingRight,
-  SittingLeft,
-  SittingRight,
-  RunningLeft,
-  RunningRight,
-  JumpingLeft,
-  JumpingRight,
-  FallingLeft,
-  FallingRight,
-} from "./state";
+export class Player {
+  constructor(game) {
+    this.game = game;
+    this.width = 100;
+    this.height = 91.3;
 
-export default class Player {
-  constructor(game, gameWidth, gameHeight) {
-    this.game = game
-    this.gameWidth = gameWidth;
-    this.gameHeight = gameHeight;
-    this.states = [
-      new StandingLeft(this),
-      new StandingRight(this),
-      new SittingLeft(this),
-      new SittingRight(this),
-      new RunningLeft(this),
-      new RunningRight(this),
-      new JumpingLeft(this),
-      new JumpingRight(this),
-      new FallingLeft(this),
-      new FallingRight(this),
-    ]; // these should occur in the same numerical order as their enum
-    this.currentState = this.states[1];
-    // this.image = document.getElementById("dogImage");
-    this.image = dogImage;
-    this.width = 200;
-    this.height = 181.83;
-    this.x = this.gameWidth * 0.5 - this.width * 0.5;
-    this.y = this.gameHeight - this.height;
+    this.x = 0;
+    this.y = this.game.height - this.height;
     this.vy = 0;
-    this.weight = 1;
-    this.frameX = 0;
-    this.frameY = 0;
-    this.maxFrame = 6;
-    this.speed = 0;
-    this.maxSpeed = 6;
-    this.fps = 30; // this is limited by screen refresh rate, cannot go higher than that
-    this.frameTimer = 0;
-    this.frameInterval = 1000 / this.fps;
-  }
-  draw(context, deltaTime) {
-    if (this.frameTimer > this.frameInterval) {
-      if (this.frameX < this.maxFrame) this.frameX++;
-      else this.frameX = 0;
-      this.frameTimer = 0;
-    } else {
-      this.frameTimer += deltaTime;
-    }
+    this.weight = 1
+    this.image = playerSheet;
 
+    this.speed = 0;
+    this.maxSpeed = 10;
+  }
+  update(input) {
+    // horizontal movemment
+    this.x += this.speed;
+    if (input.includes("ArrowRight")) this.speed = this.maxSpeed;
+    else if (input.includes("ArrowLeft")) this.speed = -this.maxSpeed;
+    else this.speed = 0;
+    if (this.x < 0) this.x = 0; // block left
+    if (this.x > this.game.width - this.width)
+      this.x = this.game.width - this.width; // block right
+    // vertical movement
+    if (input.includes('ArrowUp') && this.onGround()) this.vy -= 30
+    this.y += this.vy;
+    if (!this.onGround()) this.vy += this.weight
+    else this.vy = 0
+  }
+  draw(context) {
     context.drawImage(
       this.image,
-      this.width * this.frameX,
-      this.height * this.frameY,
+      0,
+      0,
       this.width,
       this.height,
       this.x,
@@ -67,28 +41,7 @@ export default class Player {
       this.height
     );
   }
-  update(input) {
-    this.currentState.handleInput(input);
-    //horizontal movement
-    this.x += this.speed;
-    if (this.x <= 0) this.x = 0;
-    else if (this.x >= this.gameWidth - this.width)
-      this.x = this.gameWidth - this.width;
-    // vertical movement
-    this.y += this.vy;
-    if (!this.onGround()) {
-      this.vy += this.weight;
-    } else {
-      this.vy = 0;
-    }
-    if (this.y > this.gameHeight - this.height)
-      this.y = this.gameHeight - this.height; // prevent lower than ground level. I guess this can be used to control the -z cutoff. its not 100% necc. in this case but useful.
-  }
-  setState(state) {
-    this.currentState = this.states[state];
-    this.currentState.enter();
-  }
   onGround() {
-    return this.y >= this.gameHeight - this.height;
+    return this.y >= this.game.height - this.height
   }
 }
