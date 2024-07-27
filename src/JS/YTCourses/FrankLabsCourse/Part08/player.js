@@ -1,10 +1,32 @@
-import { StandingLeft, StandingRight } from "./state";
+import {
+  StandingLeft,
+  StandingRight,
+  SittingLeft,
+  SittingRight,
+  RunningLeft,
+  RunningRight,
+  JumpingLeft,
+  JumpingRight,
+  FallingLeft,
+  FallingRight,
+} from "./state";
 
 export default class Player {
   constructor(gameWidth, gameHeight) {
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
-    this.states = [new StandingLeft(this), new StandingRight(this)]; // these should occur in the same numerical order as their enum
+    this.states = [
+      new StandingLeft(this),
+      new StandingRight(this),
+      new SittingLeft(this),
+      new SittingRight(this),
+      new RunningLeft(this),
+      new RunningRight(this),
+      new JumpingLeft(this),
+      new JumpingRight(this),
+      new FallingLeft(this),
+      new FallingRight(this),
+    ]; // these should occur in the same numerical order as their enum
     this.currentState = this.states[1];
     // this.image = document.getElementById("dogImage");
     this.image = dogImage;
@@ -12,10 +34,26 @@ export default class Player {
     this.height = 181.83;
     this.x = this.gameWidth * 0.5 - this.width * 0.5;
     this.y = this.gameHeight - this.height;
-    this.frameX = 1
-    this.frameY = 5;
+    this.vy = 0;
+    this.weight = 1;
+    this.frameX = 0;
+    this.frameY = 0;
+    this.maxFrame = 6;
+    this.speed = 0;
+    this.maxSpeed = 6;
+    this.fps = 30; // this is limited by screen refresh rate, cannot go higher than that
+    this.frameTimer = 0;
+    this.frameInterval = 1000 / this.fps;
   }
-  draw(context) {
+  draw(context, deltaTime) {
+    if (this.frameTimer > this.frameInterval) {
+      if (this.frameX < this.maxFrame) this.frameX++;
+      else this.frameX = 0;
+      this.frameTimer = 0;
+    } else {
+      this.frameTimer += deltaTime;
+    }
+
     context.drawImage(
       this.image,
       this.width * this.frameX,
@@ -28,11 +66,28 @@ export default class Player {
       this.height
     );
   }
-  update(input){
-    this.currentState.handleInput(input)
+  update(input) {
+    this.currentState.handleInput(input);
+    //horizontal movement
+    this.x += this.speed;
+    if (this.x <= 0) this.x = 0;
+    else if (this.x >= this.gameWidth - this.width)
+      this.x = this.gameWidth - this.width;
+    // vertical movement
+    this.y += this.vy;
+    if (!this.onGround()) {
+      this.vy += this.weight;
+    } else {
+      this.vy = 0;
+    }
+    if (this.y > this.gameHeight - this.height)
+      this.y = this.gameHeight - this.height; // prevent lower than ground level. I guess this can be used to control the -z cutoff. its not 100% necc. in this case but useful.
   }
-  setState(state){
-    this.currentState = this.states[state]
-    this.currentState.enter()
+  setState(state) {
+    this.currentState = this.states[state];
+    this.currentState.enter();
+  }
+  onGround() {
+    return this.y >= this.gameHeight - this.height;
   }
 }

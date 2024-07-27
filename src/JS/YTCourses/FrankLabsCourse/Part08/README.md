@@ -433,13 +433,38 @@ export function drawStatusText(context, input, player){
 }
 ```
 
-LOGIC SUMMARY
+---
 
-```html
+LOGIC SUMMARY
+[LOGIC SUMMARY](https://youtu.be/GFO_txvwK_c?si=2BpEc-LD-4OZU6WI&t=23727)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GFO_txvwK_c?si=yIBHflEAAp9dtptg&amp;start=23727" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+Remeber we are only calling lastKey pressed, therefore it may seem like some key presses get missed, if the last key is not in relation to its state.
+
+In player update, prevent falling through the floor
+
+```js
+  update(input) {
+    this.currentState.handleInput(input);
+    //horizontal movement
+    this.x += this.speed;
+    if (this.x <= 0) this.x = 0;
+    else if (this.x >= this.gameWidth - this.width)
+      this.x = this.gameWidth - this.width;
+    // vertical movement
+    this.y += this.vy
+    if (!this.onGround()){
+      this.vy += this.weight
+    } else {
+      this.vy = 0
+    }
+    if (this.y > this.gameHeight - this.height) this.y = this.gameHeight - this.height // prevent lower than ground level. I guess this can be used to control the -z cutoff. its not 100% necc. in this case but useful.
+  }
 ```
 
 Below is the spritesheet used in this example:
 > Art courtesy of [Bevouliin](https://bevouliin.com/category/free_game_asset/)
 
-6:26:13
+6:54:32
