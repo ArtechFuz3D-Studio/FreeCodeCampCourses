@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Part 08 - State Design Patterns</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../../../../../styles/styles.css" />
     <link rel="stylesheet" href="../../../../../styles/global.css" />
+    <link rel="stylesheet" href="../../../../../styles/sidebar.css" />
+    <link rel="stylesheet" href="../../../../../styles/header-nav.css" />
   </head>
   <body>
     <!-- App Overlay -->
     <header>
+      
       <nav>
         <div class="burger-icon" id="burger-icon">&#9776;</div>
         <ul id="nav-menu">
@@ -21,6 +23,7 @@
           <li><a href="./index.html">Restart</a></li>
         </ul>
       </nav>
+
     </header>
     <div class="sidebar" id="sidebar">
       <div class="sidebar-content">
@@ -59,22 +62,12 @@
           </a>
       </div> -->
       <footer>
-        <p>&copy; 2024 ArtechFuz3D. All rights reserved.</p>
+        <p class="sidefoot">&copy; 2024 ArtechFuz3D. All rights reserved.</p>
       </footer>
     </div>
     <div class="edible-content" id="main-content">
       <div class="hamburger-icon" id="hamburger">&#9776;</div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.getElementById("burger-icon");
-        const navMenu = document.getElementById("nav-menu");
-
-        hamburger.addEventListener("click", function () {
-          navMenu.classList.toggle("active");
-        });
-      });
-    </script>
     <script>
       document
         .getElementById("hamburger")
@@ -85,6 +78,17 @@
           mainContent.classList.toggle("open");
         });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("burger-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        hamburger.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+        });
+      });
+    </script>
+
 
 
 <!-- Game -->

@@ -6,7 +6,7 @@
   }
   @font-face {
     font-family: "Alata";
-    src: url("/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+    src: url("/fonts/Alata-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
@@ -20,9 +20,10 @@
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    
 }
 body {
-    font-family: 'Blanka', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     /* line-height: 1.5; */
     text-align: center; /* Center the text in the body */
         display: flex;
@@ -32,57 +33,6 @@ body {
 }
 
 
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0; /* Increase padding for better visual separation */
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 101;
-    width: 100%;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav ul {
-    list-style: none;
-}
-nav ul li {
-    display: inline-block;
-    /* margin-right: 0px; */
-    padding-left: 20px;
-    padding-right: 20px;
-   
-
-}
-nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin: 10px;
-    background-color: #fff;
-
-    transition: background-color 0.3s, color 0.3s;
-
-}
-nav a:hover {
-    background-color: #333;
-    color: #fff;
-}
-.burger-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
 
 
 /* Main content styles */
@@ -117,80 +67,21 @@ section {
     left: 0;
     right: 0;
     border-radius: 10px;
+    z-index: 20;
 }
 
 
 /* General styles */
 h1 {
-    color: #333;
+    color: #ffffff;
     font-size: 2em; /* Larger font size for the title */
     padding: 20px 0; /* Padding for the title */
 }
 p {
-    color: #555;
+    color: #333;
 }
-/* Responsive styles */
-@media only screen and (max-width: 900px) {
-    nav {
-        flex-direction: column;
-    }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 1000;
-    }
 
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        color: #fff;
-        border: none;
-        background: none;
-    }
-
-    .burger-icon {
-        display: block;
-    }
-}
-/* .iframe {
-    height: 100vh;
-    width: auto;
-    padding: 0;
-    border: 0;
-} */
-hr {
-    height: 4px;
-    background-color: brown;
-    border-color: brown;
-    margin: 35px
-  }
-a {
-    color: black;
-  }
-  
-  a:visited {
-    color: black;
-  }
-  
-  a:hover {
-    color: brown;
-  }
-  
-  a:active {
-    color: brown;
-  }
 /* General styles for hero image */
 .heroimg img {
     width: 60vw;
