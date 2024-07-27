@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Part 08 - State Design Patterns</title>
+    <title>Part 09 - Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../../../../../styles/styles.css" />
     <link rel="stylesheet" href="../../../../../styles/global.css" />
@@ -16,7 +16,7 @@
         <ul id="nav-menu">
           <li><a href="../../../../../index.html">Home</a></li>
           <li><a href="../">Back</a></li>
-          <li><a href="../Part09/index.html">Next</a></li>
+          <!-- <li><a href="../Part10/index.html">Next</a></li> -->
           <!--  easy reset button -->
           <li><a href="./index.html">Restart</a></li>
         </ul>
@@ -24,24 +24,20 @@
     </header>
     <div class="sidebar" id="sidebar">
       <div class="sidebar-content">
-        <h1>Part 08 - State Design Pattern</h1>
+        <h1>Part 09 - Game</h1>
         <p>In this lesson ...</p>
-        <p>Implementing state design patterns in a side-scroller game</p>
-        <p>using native javascript modules to split our code into multiple parts</p>
-        <p>and much more ...</p>
-        <p>
-          See github
-          <a
-            href="https://github.com/ArtechFuz3D-Studio/FreeCodeCampCourses"
-            class="button"
-            >here</a
-          >
-        </p>
+        <p>Implementing all lessons in a side-scroller game</p>
+
+
 
         <p>Below is the spritesheet used</p>
 
         <p>
-          <img id="spriteSheet" src="/dog_left_right_white.png" alt="spritesheet" />
+          <img
+            id="spriteSheet"
+            src="/dog_left_right_white.png"
+            alt="spritesheet"
+          />
         </p>
         <q
           >Art courtesy of
@@ -50,14 +46,32 @@
           ></q
         >
       </div>
-      <!-- <div class="sidebar-icons">
-          <a href="https://github.com/yourgithubusername" target="_blank" title="GitHub">
-              <img src="path-to-github-icon.png" alt="GitHub Icon" class="icon"/>
-          </a>
-          <a href="https://yourwebsite.com" target="_blank" title="Website">
-              <img src="path-to-web-icon.png" alt="Web Icon" class="icon"/>
-          </a>
-      </div> -->
+      <p>
+        See the README for more
+        <a
+          href="https://github.com/ArtechFuz3D-Studio/FreeCodeCampCourses/tree/gh-pages/src/JS/YTCourses/FrankLabsCourse/Part09"
+          class="button"
+          >here</a
+        >
+      </p>
+      <div class="sidebar-icons">
+        <a
+          href="https://github.com/ArtechFuz3D-Studio/FreeCodeCampCourses/tree/gh-pages/src/JS/YTCourses/FrankLabsCourse/Part09/"
+          target="_blank"
+          title="GitHub"
+          class="icon-link"
+        >
+          <span class="material-symbols-rounded">code</span>
+        </a>
+        <!-- <a
+          href="https://"
+          target="_blank"
+          title="Website"
+          class="icon-link"
+        >
+          <span class="material-symbols-rounded">language</span>
+        </a> -->
+      </div>
       <footer>
         <p>&copy; 2024 ArtechFuz3D. All rights reserved.</p>
       </footer>
@@ -86,13 +100,11 @@
         });
     </script>
 
-
-<!-- Game -->
+    <!-- Game -->
     <canvas id="canvas1"></canvas>
-    <img id="dogImage" src="/dog_left_right_white.png"  />
+    <img id="dogImage" src="/dog_left_right_white.png" />
     <h1 id="loading">LOADING...</h1>
     <!-- Game UI -->
-    
 
     <script type="module" src="./script.js"></script>
   </body>

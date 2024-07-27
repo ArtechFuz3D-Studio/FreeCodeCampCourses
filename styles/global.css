@@ -1,3 +1,4 @@
+@import "@fontsource-variable/material-symbols-rounded"; /* Ensure this is at the top */
 @font-face {
   font-family: "Orbitron";
   src: url("/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
@@ -15,6 +16,15 @@
   src: url("/fonts/Blanka.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+/* material-symbols-rounded-latin-wght-normal */
+@font-face {
+  font-family: 'Material Symbols Rounded Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 700;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/material-symbols-rounded:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
 body {
@@ -46,6 +56,9 @@ nav a:hover {
   border-style: groove;
   overflow: hidden;
   z-index: 101;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This ensures that the space is distributed between the elements */
 }
 .sidebar.open {
   left: 0;
@@ -76,18 +89,54 @@ nav a:hover {
 }
 }
 
+
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded Variable";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 2;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: blanchedalmond;
+}
+.material-symbols-rounded:hover {  color: rgb(167, 100, 0);}
+
+.sidebar-content {
+  flex-grow: 1;
+}
+
 .sidebar-icons {
+  display: inline-flex;
+  gap: 30px; /* Adjust gap as needed */
   text-align: center;
-  margin-bottom: 1em;
+  padding-bottom: 80px;
+  justify-content: center;
+
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit; /* Use this to keep the icon color consistent with the text color */
+}
+
+.icon-link:hover {
+  color: #000; /* Adjust hover color as needed */
 }
 
 .sidebar-icons .icon {
-  width: 24px;
-  height: 24px;
-  margin: 0 10px;
+  width: 32px;
+  height: 32px;
   vertical-align: middle;
+  color: blanchedalmond;
 }
-
 
 .edible-content {
   position: fixed;
