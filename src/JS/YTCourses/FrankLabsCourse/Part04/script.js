@@ -2,7 +2,7 @@
  * @type {HTMLCanvasElement}
  */
 import boom from '@assets/boom.png'
-import roll from '@assets/roll.wav'
+import roll from '@assets/roll.mp3'
 import roll2 from '@assets/roll2.wav'
 
 

@@ -6,5 +6,6 @@
 [Part 04 - Collisions, SFX, FX](/Part04/)
 [Part 05 - Game PointShooter](/Part05/)
 [Part 06 - Enemy Types](/Part06/)
+[Part 07 - ](/Part07/)
 
 [Home](/FreeCodeCampCourses/#home)

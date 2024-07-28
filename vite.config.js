@@ -51,6 +51,8 @@ export default defineConfig({
         ytCoursesFrankLabsCoursePart04: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part04/index.html'),
         ytCoursesFrankLabsCoursePart05: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part05/index.html'),
         ytCoursesFrankLabsCoursePart06: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part06/index.html'),
+        ytCoursesFrankLabsCoursePart07: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part07/index.html'),
+        ytCoursesFrankLabsCoursePart08: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part08/index.html'),
         contact: resolve(__dirname, 'src/Contact/index.html')
       }
     }
