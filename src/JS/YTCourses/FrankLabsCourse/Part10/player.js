@@ -1,5 +1,6 @@
 import { Diving, Falling, Hit, Jumping, Rolling, Running, Sitting } from "./playerStates";
 import { CollisionAnimation } from "./collisionAnimation";
+import { FLoatingMessage } from "./floatingMessage";
 export class Player {
   constructor(game) {
     this.game = game;
@@ -31,6 +32,7 @@ export class Player {
       new Diving(this.game),
       new Hit(this.game),
     ];
+    this.currentState = null
   }
   update(input, deltaTime) {
     this.checkCollision();
@@ -97,8 +99,12 @@ export class Player {
         this.game.collisions.push(new CollisionAnimation(this.game, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5))
         if (this.currentState === this.states[4] || this.currentState === this.states[5]){
           this.game.score++;
+          this.game.floatingMessages.push(new FLoatingMessage('+1', enemy.x, enemy.y, 150 ,50))
         } else {
           this.setState(6, 0)
+          this.game.score-=1 // adjust how many points are removed each hit
+          this.game.lives--
+          if (this.game.lives <= 0) this.game.gameOver = true
         }
 
       } 

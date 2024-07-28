@@ -24,6 +24,15 @@
 #enemy_plant,
 #enemy_spider_big,
 #fireSprite,
-#collisionAnimation {
+#collisionAnimation,
+#playerLife {
   display: none;
+}
+
+#loading { 
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
 }
