@@ -140,3 +140,47 @@ export class InputHandler {
   }
 }
 ```
+
+Tutorial uses Enter key for next part, Id like to use spacebar for the rolling state animation.
+
+```js
+export class InputHandler {
+  constructor(game) {
+    this.game = game
+    this.keys = [];
+    window.addEventListener("keydown", (e) => {
+      console.log('Key pressed:', e.key);
+      // empty quotes denotes space bar
+      if (e.key === ' ') {
+        console.log('The space bar key was pressed.');
+    }
+  
+      if (
+        (e.key === "ArrowDown" ||
+          e.key === "ArrowUp" ||
+          e.key === "ArrowLeft" ||
+          e.key === "ArrowRight" ||
+          e.key === "Control") &&
+        this.keys.indexOf(e.key) === -1
+      ) {
+        this.keys.push(e.key);
+      } else if (e.key === 'd') this.game.debug = !this.game.debug
+      // console.log(e.key, this.keys);
+    });
+    window.addEventListener("keyup", (e) => {
+      if (
+        e.key === "ArrowDown" || 
+        e.key === "ArrowUp" ||
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowRight" ||
+        e.key === 'Control'
+      ) {
+        this.keys.splice(this.keys.indexOf(e.key), 1);
+      }
+      // console.log(e.key, this.keys);
+    });
+  }
+}
+```
+
+09:21:50 - is logic for win condition
