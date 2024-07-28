@@ -11,8 +11,10 @@ window.addEventListener("load", function () {
 
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d");
-  canvas.width = 900;
+  canvas.width = 1100;
   canvas.height = 500;
+  // canvas.width = window.innerWidth;
+  // canvas.height = window.innerHeight;
 
   class Game {
     constructor(width, height) {

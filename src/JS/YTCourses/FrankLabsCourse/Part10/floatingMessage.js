@@ -16,7 +16,7 @@ export class FLoatingMessage {
         if (this.timer > 100) this.markedForDeletion = true
     }
     draw(context){
-        context.font = '20px Bangers'
+        context.font = '24px Alata'
         context.fillStyle = 'chartreuse'
         context.fillText(this.value, this.x, this.y)
         context.fillStyle = 'blueviolet'
