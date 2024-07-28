@@ -207,17 +207,17 @@ window.addEventListener("load", function () {
     }
     draw(context) {
       // Hit Box
-      context.lineWidth = 5;
-      context.strokeStyle = "white";
-      context.beginPath();
-      context.arc(
-        this.x + this.width * 0.5 - 20,
-        this.y + this.height * 0.5,
-        this.width * 0.4,
-        0,
-        Math.PI * 2
-      );
-      context.stroke();
+      // context.lineWidth = 5;
+      // context.strokeStyle = "white";
+      // context.beginPath();
+      // context.arc(
+      //   this.x + this.width * 0.5 - 20,
+      //   this.y + this.height * 0.5,
+      //   this.width * 0.4,
+      //   0,
+      //   Math.PI * 2
+      // );
+      // context.stroke();
 
       context.drawImage(
         this.image,

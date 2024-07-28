@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "Alata";
-  src: url("/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Alata-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,18 +17,11 @@
   font-weight: normal;
   font-style: normal;
 }
-/* material-symbols-rounded-latin-wght-normal */
-@font-face {
-  font-family: 'Material Symbols Rounded Variable';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 100 700;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/material-symbols-rounded:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
+
 
 body {
-  font-family: 'Blanka', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  /* letter-spacing: 0.15em; */
 }
 /* Global styles for all h1 elements */
 h1 {
@@ -37,203 +30,110 @@ h1 {
   /* padding: 20px 0; */
 }
 
+h2 {
+  font-size: 1.6em;
+
+}
+
+p {
+  color: #ffffff;
+  font-size: 1em;
+
+}
+
 nav a:hover {
   background-color: #333;
   color: #fff;
 }
-.sidebar {
-  position: fixed;
-  left: -30vw;
-  width: 30vw;
-  max-width: 30vw;
-  height: 100%;
-  background-color: #252525;
-  color: white;
-  transition: left 0.3s ease;
-  overflow: auto;
-  padding: 20px;
-  box-sizing: border-box;
-  border-style: groove;
-  overflow: hidden;
-  z-index: 101;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* This ensures that the space is distributed between the elements */
-}
-.sidebar.open {
-  left: 0;
-}
-.sidebar-content h1 {
-  margin-top: 0;
-}
-.sidebar-content p, .sidebar-content q, .sidebar-content img {
-  margin: 20px 0;
-}
-.sidebar img {
-  width: 30vw;
-  height: auto;
-}
-
-/* Media query for small devices */
-@media (max-width: 768px) {
-.sidebar {
-    max-width: 50vw;
-}
-
-.sidebar.open {
-    width: 50vw;
-}
-
-#main-content.open {
-    margin-left: 50vw;
-}
-}
 
 
-.material-symbols-rounded {
-  font-family: "Material Symbols Rounded Variable";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 48px; /* Preferred icon size */
-  display: inline-block;
-  line-height: 2;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  color: blanchedalmond;
-}
-.material-symbols-rounded:hover {  color: rgb(167, 100, 0);}
-
-.sidebar-content {
-  flex-grow: 1;
-}
-
-.sidebar-icons {
-  display: inline-flex;
-  gap: 30px; /* Adjust gap as needed */
-  text-align: center;
-  padding-bottom: 80px;
-  justify-content: center;
-
-}
-
-.icon-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: inherit; /* Use this to keep the icon color consistent with the text color */
-}
-
-.icon-link:hover {
-  color: #000; /* Adjust hover color as needed */
-}
-
-.sidebar-icons .icon {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-  color: blanchedalmond;
-}
-
-.edible-content {
-  position: fixed;
-  bottom: 30px;
-  left: 20px;
-  width: 40px; /* Adjusted to accommodate the icon size */
-  height: 40px; /* Adjusted to accommodate the icon size */
-  padding: 0; /* Removed padding for proper centering */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  border: 1px solid #009ca1;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  transition: margin-left 0.3s ease;
+/* Reset some default styles ?this is the correct css */
+body, h1, h2, p, ul, li {
   margin: 0;
-  /* z-index: 9999; */
+  padding: 0;
+  
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  /* line-height: 1.5; */
+  text-align: center; /* Center the text in the body */
+      display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box; 
 }
 
-.hamburger-icon {
-  font-size: 30px;
-  cursor: pointer;
+
+
+
+/* Main content styles */
+main {
+  width: 100%; /* Ensure the main content takes up full width */
+  /* padding: 20px;  */ /*this creates a white bar on the right*/
+  flex: 1;
+
+  height: calc(100vh - 60px); /* Set the height of the main content to 100% of the viewport height */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
+  overflow: hidden;
 }
-#main-content.open {
-margin-left: 30vw;
+section {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /* overflow-x: hidden;
+  flex-direction: column; */
+  
 }
-a:link {
-  color: #000000; /* or any color you prefer */
-  text-decoration: none; /* if you want to remove the underline */
-}
-
-/* Visited link */
-a:visited {
-  color: #000000; /* or any color you prefer */
-  text-decoration: none; /* if you want to remove the underline */
-}
-
-/* Mouse over link */
-a:hover {
-  color: #e5a0f3; /* or any color you prefer */
-  text-decoration: none; /* if you want to remove the underline */
-}
-
-/* Selected link */
-a:active {
-  color: #e5a0f3; /* or any color you prefer */
-  text-decoration: none; /* if you want to remove the underline */
-}
-.button {
-  display: inline-block;
-  padding: 4px 6px;
-  font-size: 16px;
-  color: white; /* Text color */
-  background-color: #00eeff; /* Background color */
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none; /* Remove underline */
-  cursor: pointer;
-}
-
-/* Hover effect */
-.button:hover {
-  background-color: #0056b3; /* Darker background color on hover */
-}
-
-/* Active effect */
-.button:active {
-  background-color: #004494; /* Even darker background color on active */
-}
-
-/* Focus effect */
-.button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue outline */
-}
-
-footer, .sidefoot {
-  background-color: #080f22; 
+/* Page Footer styles - not sidebar footer */
+.pagefooter {
+  background-color: #000000; /* Footer background color */
   color: white; /* Footer text color */
-  padding: 3px;
+  font-size: large;
+  padding: 20px 0;
   text-align: center;
   bottom: 2px;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   right: 0;
   border-radius: 10px;
-  font-size: 25px;
-  z-index: 100;
+  z-index: 20;
+}
+
+
+/* General styles */
+h1 {
+  color: #ffffff;
+  font-size: 2em; /* Larger font size for the title */
+  padding: 20px 0; /* Padding for the title */
+}
+p {
+  color: #333;
+}
+
+
+/* General styles for hero image */
+.heroimg img {
+  width: 60vw;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+  margin: 0 auto;
+  padding-top: 50px;
+ 
 
 }
 
+/* Responsive styles for hero image on smaller devices */
+@media only screen and (max-width: 900px) {
+  .heroimg {
+      flex-direction: column;
+      width: 100vw;
+      max-width: 100%;
+      overflow: hidden; /* Prevent overflow */
+  }
+}
+@media only screen and (max-width: 900px) {
+  main {
+     width: fit-content;
+  }}

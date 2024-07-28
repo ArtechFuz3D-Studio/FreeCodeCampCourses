@@ -16,4 +16,6 @@
 
 -----
 *To DO*
-test keeping assets in src/assets
+css refactor
+
+test keeping assets in src/assets, remove public assets and vice versa, on build and dev.
