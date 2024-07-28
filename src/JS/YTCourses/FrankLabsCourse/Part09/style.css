@@ -14,7 +14,14 @@
   max-height: 100%;
 }
 
-#playerSheet, #layerOne, #layerTwo, #layerThree, #layerFour, #layerFive{
+#playerSheet,
+#layerOne,
+#layerTwo,
+#layerThree,
+#layerFour,
+#layerFive,
+#enemy_fly,
+#enemy_plant,
+#enemy_spider_big {
   display: none;
 }
-

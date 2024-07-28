@@ -1,6 +1,7 @@
 import { InputHandler } from "./input";
 import { Background } from "./background";
 import { Player } from "./player";
+import { ClimbingEnemy, FlyingEnemy, GroundEnemy } from "./enemies";
 
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
@@ -20,15 +21,45 @@ window.addEventListener("load", function () {
       this.maxSpeed = 4
       this.background = new Background(this);
       this.player = new Player(this);
-      this.input = new InputHandler();
+      this.input = new InputHandler(this);
+      // this.enemies = [new FlyingEnemy(this), new ClimbingEnemy(this), new GroundEnemy(this)]
+      this.enemies = []
+      this.enemyTimer = 0
+      this.enemyInterval = 1000
+
+      // Score
+      this.score = 0
+
+      // debug
+      this.debug = true
     }
     update(deltaTime) {
       this.background.update();
       this.player.update(this.input.keys, deltaTime);
+      //handleEnemies
+      if (this.enemyTimer > this.enemyInterval){
+        this.addEnemy()
+        this.enemyTimer = 0
+      } else {
+        this.enemyTimer += deltaTime
+      }
+      this.enemies.forEach(enemy => {
+        enemy.update(deltaTime)
+        if (enemy.markedForDeletion) this.enemies.splice(this.enemies.indexOf(enemy), 1)
+      })
     }
     draw(context) {
       this.background.draw(context);
       this.player.draw(context);
+      this.enemies.forEach(enemy => {
+        enemy.draw(context)
+      })
+    }
+    addEnemy(){
+      if (this.speed > 0 && Math.random() < 0.5) this.enemies.push(new GroundEnemy(this))
+        else if (this.speed > 0) this.enemies.push(new ClimbingEnemy(this))
+      this.enemies.push(new FlyingEnemy(this))
+      // console.log(this.enemies)
     }
   }
 
