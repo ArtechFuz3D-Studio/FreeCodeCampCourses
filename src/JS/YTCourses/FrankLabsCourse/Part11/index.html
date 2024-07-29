@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Part 09 - Game</title>
+     <!-- Favicon -->
+     <link rel="icon" href="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/logoswirl.svg" type="image/x-icon">
+    <title>Part 11 - Game - Forest Level with Sound</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Creepster&family=Orbitron:wght@400..900&family=Wavefont:wght@4..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../../../../styles/styles.css" />
     <link rel="stylesheet" href="../../../../../styles/global.css" />
     <link rel="stylesheet" href="../../../../../styles/sidebar.css" />
     <link rel="stylesheet" href="../../../../../styles/header-nav.css" />
@@ -17,7 +23,6 @@
         <ul id="nav-menu">
           <li><a href="../../../../../index.html">Home</a></li>
           <li><a href="../">Back</a></li>
-          <li><a href="../Part10/index.html">Next</a></li>
           <li><a href="./index.html">Restart</a></li>
         </ul>
       </nav>
@@ -26,14 +31,13 @@
     <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
       <div class="sidebar-content">
-        <h1>Part 09 - Game</h1>
-        <p>In this lesson we build a 2d game and animate everything</p>
-        <p>Responsive Keyboards Controls</p>
-        <p>Animation Spritesheets</p>
-        <p>Parallax Background</p>
-        <p>Game Skins</p>
-        <p>Particle Effects</p>
-        <p>Enemy Variants</p>
+        <h1>Part 11 - Game - Forest Level with Sound</h1>
+        <p>Course Complete in Part 10</p>
+        <p>Adding audio to final</p>
+        <br/>
+        <h2>Controls</h2>
+        <p>Use arrow keys to move.</p>  
+        <p>Space Bar to Dive Attack</p>
         <q
           >Art courtesy of
           <a href="https://bevouliin.com/category/free_game_asset/"
@@ -45,7 +49,7 @@
       <p>
         See the README for more
         <a
-          href="https://github.com/ArtechFuz3D-Studio/FreeCodeCampCourses/tree/gh-pages/src/JS/YTCourses/FrankLabsCourse/Part09"
+          href="https://github.com/ArtechFuz3D-Studio/FreeCodeCampCourses/tree/gh-pages/src/JS/YTCourses/FrankLabsCourse/Part11"
           class="button"
           >here</a
         >
@@ -95,16 +99,17 @@
     <!-- Game -->
     <canvas id="canvas1"></canvas>
     <img id="playerSheet" src="/player_1.png" />
-    <img id="layerOne" src="/layer-1.png"  />
-    <img id="layerTwo" src="/layer-2.png" />
-    <img id="layerThree" src="/layer-3.png" />
-    <img id="layerFour" src="/layer-4.png" />
-    <img id="layerFive" src="/layer-5.png" />
+    <img id="layerOne" src="/layer-1f.png"  />
+    <img id="layerTwo" src="/layer-2f.png" />
+    <img id="layerThree" src="/layer-3f.png" />
+    <img id="layerFour" src="/layer-4f.png" />
+    <img id="layerFive" src="/layer-5f.png" />
     <img id="enemy_fly" src="/enemy_fly.png" />
     <img id="enemy_plant" src="/enemy_plant.png" />
     <img id="enemy_spider_big" src="/enemy_spider_big.png" />
     <img id="fireSprite" src="/fire.png" />
     <img id="collisionAnimation" src="/boom1.png" />
+    <img id="playerLife" src="/lives.png" />
     <h1 id="loading">LOADING...</h1>
     <!-- Game UI -->
 
