@@ -11,9 +11,18 @@
       style="background-color: black"
       style="filter: blur(4px) contrast(10)"
     >
-      <script type="module" src="../../../../../src/JS/YTCourses/FCC/Polyrythms/sound.js"></script>
-      <script type="module" src="../../../../../src/JS/YTCourses/FCC/Polyrythms/track.js"></script>
-      <script type="module" src="../../../../../src/JS/YTCourses/FCC/Polyrythms/ball.js"></script>
+      <script
+  
+        src="../../../../../src/JS/YTCourses/FCC/Polyrythms/sound.js"
+      ></script>
+      <script
+
+        src="../../../../../src/JS/YTCourses/FCC/Polyrythms/track.js"
+      ></script>
+      <script
+
+        src="../../../../../src/JS/YTCourses/FCC/Polyrythms/ball.js"
+      ></script>
       <script>
         const size = 1000;
         myCanvas.width = size;
@@ -21,8 +30,8 @@
 
         const trackCenter = { x: size * 0.5, y: size * 0.5 };
         const trackMinRadius = 100;
-        const trackStep = 20;
-        const ballRadius = 35;
+        const trackStep = 30;
+        const ballRadius = 55;
         const ballMinSpeed = 0.0314;
         const ballSpeedStep = -0.000314;
 
@@ -49,31 +58,108 @@
           329.63, // E4
         ];
 
+        const chineseScaleMelody = [
+          261.63, // C4 (Do)
+          329.63, // E4 (Mi)
+          392.0, // G4 (So)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          261.63, // C4 (Do)
+          329.63, // E4 (Mi)
+          392.0, // G4 (So)
+          440.0, // A4 (La)
+          293.66, // D4 (Re)
+          523.25, // C5 (Do)
+          349.23, // F4 (Note variation for interest)
+          392.0, // G4 (So)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          261.63, // C4 (Do)
+          523.25, // C5 (Do)
+          392.0, // G4 (So)
+          349.23, // F4 (Note variation for interest)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          392.0, // G4 (So)
+          329.63, // E4 (Mi)
+          261.63, // C4 (Do)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          329.63, // E4 (Mi)
+          523.25, // C5 (Do)
+          392.0, // G4 (So)
+          293.66, // D4 (Re)
+          261.63, // C4 (Do)
+        ];
+
+        // console.log(chineseScaleMelody);
+        const japaneseHirajoshiMelody = [
+          261.63, // C4 (Do)
+          293.66, // D4 (Re)
+          311.13, // E♭4 (Mi♭)
+          392.0, // G4 (So)
+          415.3, // A♭4 (La♭)
+          261.63, // C4 (Do)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          293.66, // D4 (Re)
+          415.3, // A♭4 (La♭)
+          523.25, // C5 (Do)
+          466.16, // A♭4 (La♭)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          293.66, // D4 (Re)
+          261.63, // C4 (Do)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          523.25, // C5 (Do)
+          415.3, // A♭4 (La♭)
+          261.63, // C4 (Do)
+          293.66, // D4 (Re)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          466.16, // A♭4 (La♭)
+          523.25, // C5 (Do)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          293.66, // D4 (Re)
+          261.63, // C4 (Do)
+        ];
+
+        // console.log(japaneseHirajoshiMelody);
+
         const tracks = [];
         const balls = [];
-        const N = 20;
+        const N = 10;
 
         for (let i = 0; i < N; i++) {
           const trackRadius = trackMinRadius + i * trackStep;
-          const ballSpeed = ballMinSpeed + i * ballSpeedStep;
-          //   const ballSoundFrequency = Phrygian[i];
-          //   const ballSoundFrequency = Mongolian[i];
-          const ballSoundFrequency = mongolianMelody[i];
-          //   const ballSoundFrequency = indianRagaYamanMelody[i];
+            const ballSpeed = ballMinSpeed + i * ballSpeedStep;
+            const ballSoundFrequency = chineseScaleMelody[i];
+            const hue = (i * 360) / N;
+            const track = new Track(trackCenter, trackRadius, hue);
+            const ball = new Ball(track, ballRadius, ballSpeed, ballSoundFrequency, hue);
+            tracks.push(track);
+            balls.push(ball);
+          // const trackRadius = trackMinRadius + i * trackStep;
+          // const ballSpeed = ballMinSpeed + i * ballSpeedStep;
+          // //   const ballSoundFrequency = Phrygian[i];
+          // //   const ballSoundFrequency = Mongolian[i];
+          // // const ballSoundFrequency = mongolianMelody[i];
+          // const ballSoundFrequency = japaneseHirajoshiMelody[i];
+          // //   const ballSoundFrequency = indianRagaYamanMelody[i];
 
-          const hue = (i * 360) / N;
-          const track = new Track(trackCenter, trackRadius, hue);
-          const ball = new Ball(
-            track,
-            ballRadius,
-            ballSpeed,
-            ballSoundFrequency,
-            // ballSoundFrequency2,
-
-            hue
-          );
-          tracks.push(track);
-          balls.push(ball);
+          // const hue = (i * 360) / N;
+          // const track = new Track(trackCenter, trackRadius, hue);
+          // const ball = new Ball(
+          //   track,
+          //   ballRadius,
+          //   ballSpeed,
+          //   ballSoundFrequency,
+          //   hue
+          // );
+          // tracks.push(track);
+          // balls.push(ball);
         }
 
         const ctx = myCanvas.getContext("2d");
@@ -91,8 +177,8 @@
           balls.forEach((ball) => ball.draw(ctx));
           requestAnimationFrame(animate);
         }
-        track.draw(ctx);
-        ball.draw(ctx);
+        // track.draw(ctx);
+        // ball.draw(ctx);
       </script>
     </canvas>
   </body>
