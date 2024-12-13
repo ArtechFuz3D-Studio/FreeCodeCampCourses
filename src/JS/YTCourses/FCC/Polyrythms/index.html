@@ -12,18 +12,21 @@
       style="filter: blur(4px) contrast(10)"
     >
       <script
-  
+  type="module"
         src="./sound.js"
       ></script>
       <script
-
+      type="module"
         src="./track.js"
       ></script>
       <script
-
+      type="module"
         src="./ball.js"
       ></script>
-      <script>
+      <script type="module">
+         import { Track } from './track.js';
+         import { Ball } from './ball.js';
+         import {playSound} from './sound.js'
         const size = 1000;
         myCanvas.width = size;
         myCanvas.height = size * 0.5;

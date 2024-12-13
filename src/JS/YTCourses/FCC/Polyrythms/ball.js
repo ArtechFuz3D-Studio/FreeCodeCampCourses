@@ -1,3 +1,5 @@
+import {playSound} from './sound'
+
 export class Ball {
     constructor(track, radius, speed, soundFrequency, hue) {
         this.track = track
