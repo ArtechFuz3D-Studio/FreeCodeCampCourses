@@ -81,7 +81,7 @@
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-function playSound(frequency = 445, duration = 0.5) {
+export function playSound(frequency = 445, duration = 0.5) {
     const osc = audioCtx.createOscillator();
     const envelope = audioCtx.createGain();
     const distortion = audioCtx.createWaveShaper();
