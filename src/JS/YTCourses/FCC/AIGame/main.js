@@ -12,8 +12,9 @@ car.draw(ctx)
 
 animate()
 function animate(){
+
     // ctx.clearRect(0,0,canvas.width,canvas.height)
-    car.update()
+    car.update(road.borders)
     canvas.height=window.innerHeight
 
     ctx.save()
