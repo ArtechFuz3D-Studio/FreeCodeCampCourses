@@ -1,4 +1,4 @@
-class Track {
+export class Track {
     constructor(center, radius, hue) {
         this.center = center
         this.radius = radius

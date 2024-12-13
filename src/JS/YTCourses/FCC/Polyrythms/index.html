@@ -1,71 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polyrythm</title>
-</head>
-<body>
-    <canvas id="myCanvas" style="background-color: black" style="filter: blur(4px);">
-        <script src="sound.js" ></script>
-        <script src="track.js" ></script>
-        <script src="ball.js" ></script>
-        <script>
-            const size = 1000
-            myCanvas.width = size
-            myCanvas.height = size * 0.5 
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      style="background-color: black"
+      style="filter: blur(4px) contrast(10)"
+    >
+      <script
+  type="module"
+        src="./sound.js"
+      ></script>
+      <script
+      type="module"
+        src="./track.js"
+      ></script>
+      <script
+      type="module"
+        src="./ball.js"
+      ></script>
+      <script type="module">
+         import { Track } from './track.js';
+         import { Ball } from './ball.js';
+         import {playSound} from './sound.js'
+        const size = 1000;
+        myCanvas.width = size;
+        myCanvas.height = size * 0.5;
 
-            const trackCenter = { x: size * 0.5, y: size * 0.5}
-            // const trackRadius = 100
-            const trackMinRadius = 1
-            const trackStep = 20
-            const ballRadius = 15
-            // const ballMinSpeed = 0.01
-            // const ballSpeedStep = -0.0001
-            // const ballMinSpeed = 0.5
-            const ballMinSpeed = 0.02
-            const ballSpeedStep = -0.01
+        const trackCenter = { x: size * 0.5, y: size * 0.5 };
+        const trackMinRadius = 100;
+        const trackStep = 30;
+        const ballRadius = 55;
+        const ballMinSpeed = 0.0314;
+        const ballSpeedStep = -0.000314;
 
-            const soundFrequencies = [
-            2760, 2567.98, 2396.91, 2318.51, 2174.66, 2046.5, 987.77, 880,
-            783.99, 698.46, 659.25, 587.33, 523.25, 493.88, 440, 392, 149.23,
-            129.63, 193.66, 161.63, 130, 110, 100, 90
-            ]
+        const mongolianMelody = [
+          329.63, // E4
+          440.0, // A4
+          523.25, // C5
+          392.0, // G4
+          587.33, // D5
+          440.0, // A4
+          659.25, // E5
+          523.25, // C5
+          698.46, // G5
+          587.33, // D5
+          440.0, // A4
+          329.63, // E4
+          523.25, // C5
+          392.0, // G4
+          659.25, // E5
+          698.46, // G5
+          587.33, // D5
+          440.0, // A4
+          523.25, // C5
+          329.63, // E4
+        ];
 
-            const tracks = []
-            const balls = []
-            const N = 25
+        const chineseScaleMelody = [
+          261.63, // C4 (Do)
+          329.63, // E4 (Mi)
+          392.0, // G4 (So)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          261.63, // C4 (Do)
+          329.63, // E4 (Mi)
+          392.0, // G4 (So)
+          440.0, // A4 (La)
+          293.66, // D4 (Re)
+          523.25, // C5 (Do)
+          349.23, // F4 (Note variation for interest)
+          392.0, // G4 (So)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          261.63, // C4 (Do)
+          523.25, // C5 (Do)
+          392.0, // G4 (So)
+          349.23, // F4 (Note variation for interest)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          392.0, // G4 (So)
+          329.63, // E4 (Mi)
+          261.63, // C4 (Do)
+          293.66, // D4 (Re)
+          440.0, // A4 (La)
+          329.63, // E4 (Mi)
+          523.25, // C5 (Do)
+          392.0, // G4 (So)
+          293.66, // D4 (Re)
+          261.63, // C4 (Do)
+        ];
 
-            for (let i = 0; i < N; i++) {
-                const trackRadius = trackMinRadius + i * trackStep
-                const ballSpeed = ballMinSpeed + i * ballSpeedStep
-                const ballSoundFrequency = soundFrequencies[i]
+        // console.log(chineseScaleMelody);
+        const japaneseHirajoshiMelody = [
+          261.63, // C4 (Do)
+          293.66, // D4 (Re)
+          311.13, // E♭4 (Mi♭)
+          392.0, // G4 (So)
+          415.3, // A♭4 (La♭)
+          261.63, // C4 (Do)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          293.66, // D4 (Re)
+          415.3, // A♭4 (La♭)
+          523.25, // C5 (Do)
+          466.16, // A♭4 (La♭)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          293.66, // D4 (Re)
+          261.63, // C4 (Do)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          523.25, // C5 (Do)
+          415.3, // A♭4 (La♭)
+          261.63, // C4 (Do)
+          293.66, // D4 (Re)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          466.16, // A♭4 (La♭)
+          523.25, // C5 (Do)
+          392.0, // G4 (So)
+          311.13, // E♭4 (Mi♭)
+          293.66, // D4 (Re)
+          261.63, // C4 (Do)
+        ];
 
-                const hue = (i * 360) / N
-                const track = new Track(trackCenter, trackRadius, hue)
-                const ball = new Ball(track, ballRadius, ballSpeed, ballSoundFrequency, hue)
-                tracks.push(track)
-                balls.push(ball)
-            }
+        // console.log(japaneseHirajoshiMelody);
 
-            const ctx = myCanvas.getContext("2d")
-            // const track = new Track(trackCenter, trackRadius)
-            // const ball = new Ball(track, ballRadius, ballSpeed)
+        const tracks = [];
+        const balls = [];
+        const N = 10;
 
-            animate()
-            function animate() {
-                ctx.clearRect(0,0,size,size)
-                // track.draw(ctx)
-                // ball.move()
-                // ball.draw(ctx)
-                tracks.forEach((track) => track.draw(ctx))
-                balls.forEach((ball) => ball.move())
-                balls.forEach((ball) => ball.draw(ctx))
-                requestAnimationFrame(animate)
-            }
-            track.draw(ctx)
-            ball.draw(ctx)
-        </script>
+        for (let i = 0; i < N; i++) {
+          const trackRadius = trackMinRadius + i * trackStep;
+            const ballSpeed = ballMinSpeed + i * ballSpeedStep;
+            const ballSoundFrequency = chineseScaleMelody[i];
+            const hue = (i * 360) / N;
+            const track = new Track(trackCenter, trackRadius, hue);
+            const ball = new Ball(track, ballRadius, ballSpeed, ballSoundFrequency, hue);
+            tracks.push(track);
+            balls.push(ball);
+          // const trackRadius = trackMinRadius + i * trackStep;
+          // const ballSpeed = ballMinSpeed + i * ballSpeedStep;
+          // //   const ballSoundFrequency = Phrygian[i];
+          // //   const ballSoundFrequency = Mongolian[i];
+          // // const ballSoundFrequency = mongolianMelody[i];
+          // const ballSoundFrequency = japaneseHirajoshiMelody[i];
+          // //   const ballSoundFrequency = indianRagaYamanMelody[i];
+
+          // const hue = (i * 360) / N;
+          // const track = new Track(trackCenter, trackRadius, hue);
+          // const ball = new Ball(
+          //   track,
+          //   ballRadius,
+          //   ballSpeed,
+          //   ballSoundFrequency,
+          //   hue
+          // );
+          // tracks.push(track);
+          // balls.push(ball);
+        }
+
+        const ctx = myCanvas.getContext("2d");
+        // const track = new Track(trackCenter, trackRadius)
+        // const ball = new Ball(track, ballRadius, ballSpeed)
+
+        animate();
+        function animate() {
+          ctx.clearRect(0, 0, size, size);
+          // track.draw(ctx)
+          // ball.move()
+          // ball.draw(ctx)
+          tracks.forEach((track) => track.draw(ctx));
+          balls.forEach((ball) => ball.move());
+          balls.forEach((ball) => ball.draw(ctx));
+          requestAnimationFrame(animate);
+        }
+        // track.draw(ctx);
+        // ball.draw(ctx);
+      </script>
     </canvas>
-</body>
+  </body>
 </html>

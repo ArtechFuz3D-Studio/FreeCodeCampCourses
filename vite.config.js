@@ -33,6 +33,7 @@ export default defineConfig({
         algDataStruct: resolve(__dirname, 'src/JS/Alg&DataStruct/index.html'),
         ytCourses: resolve(__dirname, 'src/JS/YTCourses/index.html'),
         ytCoursesFrankLabsCourse: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/index.html'),
+        ytCoursesFCC: resolve(__dirname, 'src/JS/YTCourses/FCC/index.html'),
         mozillaDevSynth: resolve(__dirname, 'src/JS/MozillaDev/Synth/index.html'),
         responsiveWebCafeMenu: resolve(__dirname, 'src/JS/ResponsiveWeb/CafeMenu/index.html'),
         responsiveWebCatPhotoApp: resolve(__dirname, 'src/JS/ResponsiveWeb/CatPhotoApp/index.html'),
@@ -56,6 +57,8 @@ export default defineConfig({
         ytCoursesFrankLabsCoursePart09: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part09/index.html'),
         ytCoursesFrankLabsCoursePart10: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part10/index.html'),
         ytCoursesFrankLabsCoursePart11: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part11/index.html'),
+        ytCoursesFCCPolyrythms: resolve(__dirname, 'src/JS/YTCourses/FCC/Polyrythms/index.html'),
+        ytCoursesFCCProAudioAIGame: resolve(__dirname, 'src/JS/YTCourses/FCC/ProAudio-AIGame/index.html'),
         contact: resolve(__dirname, 'src/Contact/index.html')
       }
     }
