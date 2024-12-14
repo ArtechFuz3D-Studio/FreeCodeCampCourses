@@ -2,7 +2,6 @@ import {lerp, getIntersection} from './utils'
 
 
 export class Sensor{
-
     constructor(car){
         this.car=car;
         this.rayCount=5;
@@ -47,7 +46,7 @@ export class Sensor{
         }
     }
 
-    #castRays( start, end){
+    #castRays(){
         this.rays=[];
         for(let i=0;i<this.rayCount;i++){
             const rayAngle=lerp(
@@ -69,12 +68,6 @@ export class Sensor{
 
     draw(ctx){
         for(let i=0;i<this.rayCount;i++){
-
-            // add this check
-            if (!this.rays[i] || this.rays[i].length < 2) {
-                continue;
-            }
-            //
             let end=this.rays[i][1];
             if(this.readings[i]){
                 end=this.readings[i];
@@ -108,7 +101,6 @@ export class Sensor{
         }
     }        
 }
-
 //export class Sensor{
 //     constructor(car){
 //         this.car=car

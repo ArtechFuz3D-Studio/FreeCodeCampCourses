@@ -1,8 +1,10 @@
+
 import { Controls } from "./controls";
 import {Sensor} from './sensor'
+import { polyIntersect } from "./utils";
 
 export class Car {
-  constructor(x, y, width, height) {
+  constructor(x, y, width, height, roadBorders) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -13,23 +15,61 @@ export class Car {
     this.maxSpeed = 3;
     this.freak = 0.02; // shin
     this.angle = 0;
+    this.damaged = false
 
     this.sensor = new Sensor(this)
+    // this.damaged = this.#assessDamage(roadBorders)
     this.controls = new Controls();
   }
 
+
   update(roadBorders) {
-  this.#move()
+    if(!this.damaged){
+        this.#move()
+        this.polygon = this.#createPolygon()
+        this.damaged = this.#assessDamage(roadBorders)
+    }
   this.sensor.update(roadBorders)
+  }
+
+  #assessDamage(roadBorders){
+    for (let i = 0; i < roadBorders.length; i++){
+      if(polyIntersect(this.polygon, roadBorders[i])){
+        return true
+      }
+    }
+    return false
+  }
+
+
+  #createPolygon(){
+    const points = []
+    const rad = Math.hypot(this.width, this.height)*0.5
+    const alpha = Math.atan2(this.width, this.height)
+    points.push({
+      x: this.x - Math.sin(this.angle - alpha) * rad,
+      y: this.y - Math.cos(this.angle - alpha)* rad
+    })
+    points.push({
+      x: this.x - Math.sin(this.angle + alpha) * rad,
+      y: this.y - Math.cos(this.angle + alpha)* rad
+    })
+    points.push({
+      x: this.x - Math.sin(Math.PI + this.angle - alpha) * rad,
+      y: this.y - Math.cos(Math.PI + this.angle - alpha)* rad
+    })
+    points.push({
+      x: this.x - Math.sin(Math.PI + this.angle + alpha) * rad,
+      y: this.y - Math.cos(Math.PI + this.angle + alpha)* rad
+    })
+    return points
   }
 
   #move(){
     if (this.controls.forward) {
-        // this.y-=2
         this.speed += this.acc;
       }
       if (this.controls.reverse) {
-        // this.y+=2
         this.speed -= this.acc;
       }
       if (this.speed > this.maxSpeed) {
@@ -52,36 +92,31 @@ export class Car {
         const flip = this.speed > 0 ? 1 : -1;
         // Left
         if (this.controls.left) {
-          // this.x-=2
           this.angle += 0.03*flip
         }
         // Right
         if (this.controls.right) {
-          // this.x+=2
           this.angle -= 0.03*flip
         }
       }
   
       this.x -= Math.sin(this.angle) * this.speed;
       this.y -= Math.cos(this.angle) * this.speed;
-      // this.y-=this.speed
+
   }
 
   draw(ctx) {
-    ctx.save();
-    ctx.translate(this.x, this.y);
-    ctx.rotate(-this.angle);
-    ctx.beginPath();
-    ctx.rect(
-      // this.x -this.width*0.5,
-      // this.y -this.height*0.5,
-      -this.width * 0.5,
-      -this.height * 0.5,
-      this.width,
-      this.height
-    );
-    ctx.fill();
-    ctx.restore();
+    if(this.damaged){
+      ctx.fillStyle = "orange"
+    } else{
+      ctx.fillStyle= "black"
+    }
+    ctx.beginPath()
+    ctx.moveTo(this.polygon[0].x, this.polygon[0].y)
+    for (let i = 1; i < this.polygon.length; i++){
+      ctx.lineTo(this.polygon[i].x, this.polygon[i].y)
+    }
+    ctx.fill()
 
     this.sensor.draw(ctx)
   }
