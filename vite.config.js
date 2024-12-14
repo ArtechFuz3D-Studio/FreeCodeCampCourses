@@ -59,6 +59,7 @@ export default defineConfig({
         ytCoursesFrankLabsCoursePart11: resolve(__dirname, 'src/JS/YTCourses/FrankLabsCourse/Part11/index.html'),
         ytCoursesFCCPolyrythms: resolve(__dirname, 'src/JS/YTCourses/FCC/Polyrythms/index.html'),
         ytCoursesFCCProAudioAIGame: resolve(__dirname, 'src/JS/YTCourses/FCC/ProAudio-AIGame/index.html'),
+        ytCoursesFreeCodeCampPolyrythms: resolve(__dirname, 'src/JS/YTCourses/FCC/Polyrythms/index.html'),
         contact: resolve(__dirname, 'src/Contact/index.html')
       }
     }
