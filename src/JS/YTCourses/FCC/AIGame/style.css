@@ -6,9 +6,13 @@ body {
     text-align: center;
 }
 
-#myCanvas{
+#carCanvas{
  background: rgb(38, 44, 51);
     /* background-color: ; */
     /* background-color: mediumspringgreen; */
     /* background-color: ; */
+}
+#networkCanvas{
+ background: rgb(0, 0, 0);
+
 }
