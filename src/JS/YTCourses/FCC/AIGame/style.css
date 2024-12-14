@@ -1,11 +1,18 @@
 body {
     display: flow-root;
     margin: 0;
-    background: darkseagreen;
+    background: rgb(73, 131, 73);
     overflow: hidden;
     text-align: center;
 }
 
-#myCanvas{
-    background: lightcoral;
+#carCanvas{
+ background: rgb(38, 44, 51);
+    /* background-color: ; */
+    /* background-color: mediumspringgreen; */
+    /* background-color: ; */
+}
+#networkCanvas{
+ background: rgb(0, 0, 0);
+
 }
