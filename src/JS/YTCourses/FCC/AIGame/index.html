@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Learning Game</title>
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas  id="carCanvas"></canvas>
-    <canvas  id="networkCanvas"></canvas>
+        <!-- Add the module script to bind event listeners -->
+        <script type="module">
+            import { save, discard } from './main.js';
+            document.getElementById('save').addEventListener('click', save);
+            
+        document.getElementById('discard').addEventListener('click', discard);
+  
+        
+        </script>
+    <canvas id="carCanvas"></canvas>
+    <div id="verticalButtons">
+        <button id="save">💾</button>
+        <button id="discard">🗑️</button>
+    </div>
+    <canvas id="networkCanvas"></canvas>
+
+
+
     <script type="module" src="visualiser.js"></script>
     <script type="module" src="network.js"></script>
     <script type="module" src="sensor.js"></script>
