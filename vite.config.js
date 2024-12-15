@@ -62,7 +62,9 @@ export default defineConfig({
         ytCoursesFCCProAudioAIGame: resolve(__dirname, 'src/JS/YTCourses/FCC/ProAudio-AIGame/index.html'),
         ytCoursesFCCAIGame: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGame/index.html'),
         ytCoursesFCCAIGameP1_9: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGameP1_9/index.html'),
+
         contact: resolve(__dirname, 'src/Contact/index.html')
+
       }
       // input: {
       //   main: resolve(__dirname, 'index.html'),
