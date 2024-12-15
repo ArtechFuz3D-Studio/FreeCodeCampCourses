@@ -4,7 +4,7 @@ import { Sensor } from "./sensor";
 import { polyIntersect } from "./utils";
 
 export class Car {
-  constructor(x, y, width, height, controlType, maxSpeed = 10) {
+  constructor(x, y, width, height, controlType, maxSpeed = 6) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -130,7 +130,7 @@ export class Car {
     this.y -= Math.cos(this.angle) * this.speed;
   }
 
-  draw(ctx, color) {
+  draw(ctx, color, drawSensor=false) {
     if (this.damaged) {
       ctx.fillStyle = "snow";
     } else {
@@ -143,7 +143,7 @@ export class Car {
     }
     ctx.fill();
 
-    if (this.sensor) {
+    if (this.sensor && drawSensor) {
       this.sensor.draw(ctx);
     }
   }
