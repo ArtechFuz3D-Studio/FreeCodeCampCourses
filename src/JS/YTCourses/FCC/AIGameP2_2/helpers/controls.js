@@ -1,5 +1,5 @@
-import { Point } from "./helpers/primitives/point";
-import { Segment } from "./helpers/primitives/segment";
+import { Point } from "./primitives/point";
+import { Segment } from "./primitives/segment";
 
 
 myCanvas.width = 600;
