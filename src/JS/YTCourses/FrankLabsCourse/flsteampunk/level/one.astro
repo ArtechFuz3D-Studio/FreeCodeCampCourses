@@ -1,0 +1,72 @@
+---
+import type { NavItem } from "~/types";
+import { Icon } from "astro-icon/components";
+
+const navItems: Array<NavItem> = [
+  { title: "Restart", url: "/game" },
+  { title: "Next", url: "/gamelvl2" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/logoswirl.svg" type="image/x-icon"> -->
+    <title>FL Steam Punk</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Bangers&family=Creepster&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=Orbitron:wght@400..900&family=Wavefont:wght@4..1000&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="/src/styles/levelOne.css" />
+  </head>
+  <body>
+    <!-- App Overlay -->
+    <header id="navheader">
+      <nav>
+        <div class="z-50 flex items-center gap-6">
+          <nav class="hidden sm:block">
+            <ul class="flex items-center gap-6">
+              {
+                navItems.map(({ title, url }) => (
+                  <li>
+                    <a class="text-lg/normal" href={url}>
+                      {title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+          <button
+            id="open-nav-button"
+            type="button"
+            class="btn sm:hidden"
+            aria-label="Navigation"
+          >
+            <Icon name="mdi:menu" class="size-8" />
+          </button>
+        </div>
+        <!-- <div class="burger-icon" id="burger-icon">&#9776;</div> -->
+        <ul id="nav-menu">
+          <!-- <li><a href="../index.html">Home</a></li>
+          <li><a href="../">Back</a></li> -->
+          <!-- <li><a href="game">Restart</a></li>
+          <li><a href="gamelvl2">Next Level</a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Game -->
+    <canvas id="canvas1"></canvas>
+ 
+    <h1 id="loading">LOADING...</h1>
+    <!-- Game UI -->
+
+    <script src="./main.js"></script>
+  </body>
+</html>

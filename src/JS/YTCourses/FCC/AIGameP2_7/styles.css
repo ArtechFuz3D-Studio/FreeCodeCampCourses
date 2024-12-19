@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    text-align: center;
+    display: flow-root;
+
+}
+
+h1 {
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;   
+
+}
+
+#myCanvas {
+    background-color: chartreuse;
+    
+}
+
+#controls3 button {
+    margin: auto;
+    background-color: rgb(255, 133, 219);
+    font-size: 20px;
+    padding: 5px 7px 7px 5px;
+    border-radius: 5px;
+    border: none;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+
+}
+#controls2 button {
+    margin: auto;
+    background-color: rgb(148, 255, 126);
+    font-size: 20px;
+    padding: 5px 7px 7px 5px;
+    border-radius: 5px;
+    border: none;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+
+}
+#controls1 button {
+    margin: 15px;
+    background-color: rgb(255, 188, 100);
+    font-size: 16px;
+    padding: 5px 7px 7px 5px;
+    border-radius: 5px;
+    border: none;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+
+}
