@@ -34,7 +34,8 @@ export class Envelope {
     // return new Polygon([p1_ccw, p2_ccw, p2_cw, p1_cw])
 
     }
-    draw(ctx) {
-        this.poly.draw(ctx)
+    draw(ctx, options) {
+        this.poly.draw(ctx, options)
+        // this.poly.drawSegments(ctx)
     }
 }

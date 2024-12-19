@@ -50,6 +50,7 @@ function animate(){
     viewport.reset()
     world. generate()
     world.draw(ctx)
+    ctx.globalAlpha = 0.25;
     graphEditor.display()
 
     // new Polygon(graph.points).draw(ctx)
