@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Editor 7</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+      <!-- Open Graph Image -->
+      <meta property="og:image" content="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/AIGame/Preview.png">
+      <meta property="og:image:secure_url" content="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/Preview.png">
+      <meta property="og:image:type" content="image/png">
+
+</head>
+<body>
+    <h1>World Editor Lecture 7/11</h1>
+
+    <script type="module" src="./helpers/controls.js"></script>
+    <div id="controls1">
+        <button id="addpoint">Add Point
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8"/></svg>
+        </button>
+        <button id="addsegment">Add Segment
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M944 224c-44.192 0-79.999 35.824-79.999 80c0 9.072 1.84 17.632 4.607 25.76L673.6 497.68C659.92 486.784 642.848 480 624 480c-21.743 0-41.407 8.736-55.808 22.816l-152.752-76.48C412.465 384.848 378.241 352 336 352c-44.175 0-80 35.824-80 80c0 12.096 2.88 23.44 7.68 33.712L107.936 645.296C99.2 642.032 89.872 640 80 640c-44.176 0-80 35.824-80 80s35.824 80 80 80s80-35.824 80-80c0-10.64-2.176-20.767-5.952-30.048l158.272-181.92C319.856 510.368 327.696 512 336 512c23.28 0 44.047-10.112 58.671-26l149.408 74.912C544.608 604.656 580.127 640 624 640c44.193 0 80-35.824 80-80c0-1.424-.336-2.752-.416-4.16L911.68 377.072C921.584 381.456 932.463 384 944 384c44.193 0 80-35.808 80-80c0-44.176-35.807-80-79.999-80z"/></svg>        <button id="remsegment">Remove Segment
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>
+        </button>
+        <button id="rempoint">Remove Point
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192s192-86 192-192Z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 256H176"/></svg>
+        </button>
+        <button id="remall">Remove All
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 305"><defs><linearGradient id="logosDgraphIcon0" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#ff1800"/><stop offset="100%" stop-color="#ff009b"/></linearGradient></defs><path fill="url(#logosDgraphIcon0)" d="M206.721 54.81a36.94 36.94 0 0 0 4.55-17.758C211.239 16.602 194.67.033 174.22 0c-17.029.02-31.859 11.628-35.97 28.153l-10.244-.404C57.319 27.76.017 85.057 0 155.744a127.6 127.6 0 0 0 36.385 89.374a36.76 36.76 0 0 0-7.453 22.248c.034 20.45 16.603 37.019 37.053 37.052c15.654 0 29.154-9.829 34.534-23.663a128.5 128.5 0 0 0 27.476 2.973c70.69-.011 127.994-57.314 128.005-128.005A127.62 127.62 0 0 0 206.72 54.83zm-32.512 4.986c-1.937 0-3.867-.244-5.744-.729l-15.37 44.597l22.45-3.66l-31.623 51.533l26.313-6.391L81.63 250.79c8.423 8.077 9.37 21.215 2.194 30.417c-7.176 9.201-20.15 11.482-30.034 5.28c-9.855-6.281-13.348-19.008-8.08-29.44c5.266-10.433 17.58-15.179 28.487-10.98l25.11-54.779l-24.503 6.634l39.843-57.035l-24.492 5.926l69.443-92.459A22.753 22.753 0 0 1 174.2 14.187c12.563 0 22.748 10.18 22.753 22.743c0 12.562-10.18 22.748-22.743 22.753z"/></svg>
+        </button>
+    </div>
+  
+    <canvas id="myCanvas"></canvas>
+    <script type="module" src="./main.js"></script>
+
+    <script type="module" src="./helpers/world.js"></script>
+    <script type="module" src="./helpers/items/tree.js"></script>
+    <script type="module" src="./helpers/items/building.js"></script>
+    <script type="module" src="./helpers/viewport.js"></script>
+    <script type="module" src="./helpers/graphEditor.js"></script>
+    <script type="module" src="./helpers/math/utils.js"></script>
+    <script type="module" src="./helpers/math/graph.js"></script>
+    <script type="module" src="./helpers/primitives/point.js"></script>
+    <script type="module" src="./helpers/primitives/segment.js"></script>
+    <script type="module" src="./helpers/primitives/polygon.js"></script>
+    <script type="module" src="./helpers/primitives/envelope.js"></script>
+    
+
+    &nbsp;
+    <div id="controls2">
+    <button id="dispose">🗑️</button>
+    <button id="save">💾</button>
+ </div>
+&nbsp;
+    <div id="controls3">
+        <button id="graphBtn" onclick="setMode('graph')">🌐</button>
+        <button id="stopBtn" onclick="setMode('stop')">🛑</button>
+        <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
+        <button id="crossingBtn" onclick="setMode('crossing')">🚶</button>
+        <button id="parkingBtn" onclick="setMode('parking')">🅿️</button>
+        <button id="lightBtn" onclick="setMode('light')">🚦</button>
+        <button id="startBtn" onclick="setMode('start')">🚙</button>
+        <button id="targetBtn" onclick="setMode('target')">🎯</button>
+ </div>
+
+</body>
+</html>
