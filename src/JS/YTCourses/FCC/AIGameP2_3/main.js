@@ -1,10 +1,12 @@
-import { Point } from "./helpers/primitives/point.js"
+// import { Point } from "./helpers/primitives/point.js"
+import { Polygon } from "./helpers/primitives/polygon.js";
 import { Graph } from "./helpers/math/graph.js"
-import { Segment } from "./helpers/primitives/segment.js"
+// import { Segment } from "./helpers/primitives/segment.js"
 import { addRandomPoint, addRandomSegment, removeRandomSegment, removeRandomPoint, removeAll } from "./helpers/controls.js";
 import { GraphEditor } from "./helpers/graphEditor.js";
 import { Viewport } from "./helpers/viewport.js";
-
+import { Envelope } from "./helpers/primitives/envelope.js";
+import { World } from "./helpers/world.js";
 
 // myCanvas.width = 600
 // myCanvas.height = 600
@@ -29,6 +31,7 @@ const graphInfo = graphString ? JSON.parse(graphString) : null
 const graph = graphInfo
     ? Graph.load(graphInfo)
     :  new Graph()
+    const world = new World(graph)
 const viewport = new Viewport(myCanvas)
 // const graphEditor = new GraphEditor(myCanvas, graph,)
 const graphEditor = new GraphEditor(viewport, graph,)
@@ -45,9 +48,12 @@ function animate(){
     // ctx.translate(offset.x, offset.y)
 
     viewport.reset()
+    world. generate()
+    world.draw(ctx)
     graphEditor.display()
 
-
+    // new Polygon(graph.points).draw(ctx)
+    // new Envelope(graph.segments[0], 200, 20).draw(ctx)
     requestAnimationFrame(animate)
 }
 

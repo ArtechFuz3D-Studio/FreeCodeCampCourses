@@ -28,3 +28,13 @@ export function add(p1, p2) {
 export function scale(p, scaler) {
     return new Point(p.x * scaler, p.y * scaler);
  }
+
+ export function translate(loc, angle, offset){
+    return new Point(
+        loc.x + Math.cos(angle) * offset,
+        loc.y + Math.sin(angle) * offset
+    )
+ }
+ export function angle(p) {
+    return Math.atan2(p.y, p.x)
+ }
