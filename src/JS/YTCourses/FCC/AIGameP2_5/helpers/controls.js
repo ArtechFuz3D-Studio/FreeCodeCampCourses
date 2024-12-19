@@ -3,8 +3,8 @@ import { Segment } from "./primitives/segment";
 
 
 
-myCanvas.width = 600;
-myCanvas.height = 600;
+// myCanvas.width = 600;
+// myCanvas.height = 600;
 
 const ctx = myCanvas.getContext("2d");
 
