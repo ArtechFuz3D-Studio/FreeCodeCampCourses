@@ -1,5 +1,6 @@
 import { Point } from "./primitives/point";
 import { Segment } from "./primitives/segment";
+import {graphEditor} from '../main'
 
 
 
@@ -24,6 +25,7 @@ export function setMode(mode) {
     case "graph":
       graphBtn.style.backgroundColor = "white"
       graphBtn.style.filter = ""
+      graphEditor.enable()
       break
     case "stop":
       stopBtn.style.backgroundColor = "white"
@@ -35,6 +37,7 @@ export function setMode(mode) {
 export function disableEditors(){
   graphBtn.style.backgroundColor = "gray"
   graphBtn.style.filter = "grayscale(100%)"
+  graphEditor.disable()
   stopBtn.style.backgroundColor = "gray"
   stopBtn.style.filter = "grayscale(100%)"
 }

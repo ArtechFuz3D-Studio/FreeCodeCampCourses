@@ -24,7 +24,7 @@ const graph = graphInfo
 const world = new World(graph)
 
 const viewport = new Viewport(myCanvas)
-const graphEditor = new GraphEditor(viewport, graph,)
+export const graphEditor = new GraphEditor(viewport, graph,)
 
 let oldGraphHash = graph.hash()
 
@@ -89,5 +89,7 @@ removeRandomPoint(graph, myCanvas, ctx)
 removeAll(graph, myCanvas, ctx)
 save(graph, myCanvas, ctx)
 dispose(graph, myCanvas, ctx)
-setMode()
+setMode(graph)
 disableEditors()
+graphEditor(viewport, graph)
+
