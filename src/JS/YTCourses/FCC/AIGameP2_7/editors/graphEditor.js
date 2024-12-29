@@ -1,6 +1,6 @@
-import { Point } from "./primitives/point";
-import { getNearestPoint } from "./math/utils";
-import { Segment } from "./primitives/segment";
+// import { Point } from "../helpers/primitives/point";
+import { getNearestPoint } from "../helpers/math/utils";
+import { Segment } from "../helpers/primitives/segment";
 
 
 export class GraphEditor {
@@ -24,6 +24,8 @@ export class GraphEditor {
    }
    disable(){
       this.#removeEventListeners()
+      this.selected = false
+      this.hovered = false
    }
 
    #addEventListeners() {

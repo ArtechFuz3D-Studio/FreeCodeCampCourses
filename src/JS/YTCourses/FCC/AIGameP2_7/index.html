@@ -11,7 +11,9 @@
       <meta property="og:image" content="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/AIGame/Preview.png">
       <meta property="og:image:secure_url" content="https://artechfuz3d-studio.github.io/FreeCodeCampCourses/public/Preview.png">
       <meta property="og:image:type" content="image/png">
-
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Alata&family=Audiowide&family=Bangers&family=Creepster&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=Orbitron:wght@400..900&family=Wavefont:wght@4..1000&family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>World Editor Lecture 7/11</h1>
@@ -40,7 +42,18 @@
     <script type="module" src="./helpers/items/tree.js"></script>
     <script type="module" src="./helpers/items/building.js"></script>
     <script type="module" src="./helpers/viewport.js"></script>
-    <script type="module" src="./helpers/graphEditor.js"></script>
+
+    <script type="module" src="./markings/marking.js"></script>
+    <script type="module" src="./markings/stop.js"></script>
+    <script type="module" src="./markings/start.js"></script>
+    <script type="module" src="./markings/crossing.js"></script>
+
+    <script type="module" src="./editors/markingEditor.js"></script>
+    <script type="module" src="./editors/graphEditor.js"></script>
+    <script type="module" src="./editors/stopEditor.js"></script>
+    <script type="module" src="./editors/startEditor.js"></script>
+    <script type="module" src="./editors/crossingEditor.js"></script>
+
     <script type="module" src="./helpers/math/utils.js"></script>
     <script type="module" src="./helpers/math/graph.js"></script>
     <script type="module" src="./helpers/primitives/point.js"></script>
@@ -58,13 +71,19 @@
     <div id="controls3">
         <button id="graphBtn" onclick="setMode('graph')">🌐</button>
         <button id="stopBtn" onclick="setMode('stop')">🛑</button>
-        <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
+        <button id="startBtn" onclick="setMode('start')">🚙</button>
         <button id="crossingBtn" onclick="setMode('crossing')">🚶</button>
+
+        <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
         <button id="parkingBtn" onclick="setMode('parking')">🅿️</button>
         <button id="lightBtn" onclick="setMode('light')">🚦</button>
-        <button id="startBtn" onclick="setMode('start')">🚙</button>
+
         <button id="targetBtn" onclick="setMode('target')">🎯</button>
  </div>
 
+ <!-- <img id="car1" src="/AIGame/car1.webp"> -->
 </body>
 </html>
+
+<!-- Timestamp -->
+<!-- chapter refactor -->
