@@ -2,9 +2,6 @@ import { Point } from "./primitives/point";
 import { Segment } from "./primitives/segment";
 import { tools, world, graph } from "../main";
 
-// myCanvas.width = 600;
-// myCanvas.height = 600;
-
 const ctx = myCanvas.getContext("2d");
 
 export function dispose() {
@@ -22,10 +19,10 @@ export function save(graph) {
 export function setMode(mode) {
 
   disableEditors();
+
   tools[mode].button.style.backgroundColor = "white";
   tools[mode].button.style.filter = "";
   tools[mode].editor.enable();
-
 }
 
 export function disableEditors() {

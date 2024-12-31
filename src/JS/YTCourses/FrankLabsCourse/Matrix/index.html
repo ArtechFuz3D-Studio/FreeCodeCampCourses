@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Matrix</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <script src="script.js"></script>
+    <div id="draggable" class="draggable">
+        <h2>4 Principles of Object-Oriented Programming</h2>
+        
+        <span>1:</span> <h3>Encapsulation</h3>
+        
+        <span>2:</span> <h3>Abstraction</h3>
+        <h4>Example: Using private methods on a class. 
+            Hides unneccessary details from user.</h4>
+        
+        <span>3:</span> <h3>Inheritance</h3>
+        
+        <span>4:</span> <h3>Polymorphism</h3>
+    </div>
+    <script>
+        const draggableDiv = document.getElementById('draggable');
+
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        // Mouse down event
+        draggableDiv.addEventListener('mousedown', (event) => {
+            isDragging = true;
+            offsetX = event.clientX - draggableDiv.offsetLeft;
+            offsetY = event.clientY - draggableDiv.offsetTop;
+
+            // Change cursor style
+            draggableDiv.style.cursor = 'grabbing';
+        });
+
+        // Mouse move event
+        document.addEventListener('mousemove', (event) => {
+            if (isDragging) {
+                // Calculate new position
+                const left = event.clientX - offsetX;
+                const top = event.clientY - offsetY;
+
+                // Update div position
+                draggableDiv.style.left = `${left}px`;
+                draggableDiv.style.top = `${top}px`;
+            }
+        });
+
+        // Mouse up event
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+
+                // Restore cursor style
+                draggableDiv.style.cursor = 'move';
+            }
+        });
+    </script>
+</body>
+</html>
