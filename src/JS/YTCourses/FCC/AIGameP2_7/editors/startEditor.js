@@ -1,5 +1,6 @@
 import { Start } from "../markings/start";
 import { MarkingEditor } from "./markingEditor";
+import { world } from "../main";
 
 export class StartEditor extends MarkingEditor {
   constructor(viewport, world) {

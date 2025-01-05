@@ -1,8 +1,9 @@
 import { Point } from "./primitives/point";
 import { Segment } from "./primitives/segment";
-import { tools, world, graph } from "../main";
+import {  world, graph, tools } from "../main";
 
 const ctx = myCanvas.getContext("2d");
+
 
 export function dispose() {
   document.getElementById("dispose").addEventListener("click", () => {

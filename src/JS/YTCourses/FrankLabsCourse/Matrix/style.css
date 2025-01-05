@@ -12,7 +12,7 @@ canvas {
     position: absolute;
     top: 0;
     left: 0;
-    filter: blur(4px) saturate(3) brightness(2);
+    filter: blur(1px) saturate(3) brightness(2);
 }
 
 div {
@@ -42,8 +42,8 @@ h4 {
 .draggable {
     width: 300px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: #f9f9f95d;
+    border: 1px solid #f9f9f928;
     border-radius: 8px;
     position: absolute;
     cursor: move;

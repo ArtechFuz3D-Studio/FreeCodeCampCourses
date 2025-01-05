@@ -24,7 +24,7 @@
 <body>
     <h1>World Editor Lecture 7/11</h1>
 
-    <script type="module" src="./helpers/controls.js"></script>
+
     <div id="controls1">
         <button id="addpoint">Add Point
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -78,10 +78,10 @@
         <button id="crossingBtn" onclick="setMode('crossing')">🚶</button>
         <button id="startBtn" onclick="setMode('start')">🚙</button>
 
-        <!-- <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
+        <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
         <button id="parkingBtn" onclick="setMode('parking')">🅿️</button>
         <button id="lightBtn" onclick="setMode('light')">🚦</button>
-        <button id="targetBtn" onclick="setMode('target')">🎯</button> -->
+        <button id="targetBtn" onclick="setMode('target')">🎯</button>
     </div>
 
     <img id="car" src="/AIGame/car.png">
@@ -90,10 +90,12 @@
     <canvas id="myCanvas"></canvas>
     <script type="module" src="./main.js"></script>
 
+
     <script type="module" src="./helpers/world.js"></script>
     <script type="module" src="./helpers/items/tree.js"></script>
     <script type="module" src="./helpers/items/building.js"></script>
     <script type="module" src="./helpers/viewport.js"></script>
+
 
     <script type="module" src="./markings/marking.js"></script>
     <script type="module" src="./markings/stop.js"></script>
