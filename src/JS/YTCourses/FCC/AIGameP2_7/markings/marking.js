@@ -1,7 +1,7 @@
-import { translate } from "../helpers/math/utils"
-import { Segment } from "../helpers/primitives/segment"
-import { angle } from "../helpers/math/utils"
-import { Envelope } from "../helpers/primitives/envelope"
+import { translate } from "../helpers/math/utils.js"
+import { Segment } from "../helpers/primitives/segment.js"
+import { angle } from "../helpers/math/utils.js"
+import { Envelope } from "../helpers/primitives/envelope.js"
 
 
 export class Marking {

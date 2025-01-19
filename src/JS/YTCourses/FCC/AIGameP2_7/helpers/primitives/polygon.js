@@ -1,5 +1,5 @@
-import { Point } from "./point";
-import { Segment } from "./segment";
+import { Point } from "./point.js";
+import { Segment } from "./segment.js";
 
 import { getIntersection, getRandomColor, average } from "../math/utils";
 

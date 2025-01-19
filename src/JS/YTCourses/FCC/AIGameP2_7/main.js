@@ -23,17 +23,21 @@ export const viewport = new Viewport(myCanvas)
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded. Initializing tools...");
     // Set up mode switching
+
     document.getElementById("graphBtn").addEventListener("click", () => setMode("graph"));
     document.getElementById("stopBtn").addEventListener("click", () => setMode("stop"));
     document.getElementById("crossingBtn").addEventListener("click", () => setMode("crossing"));
     document.getElementById("startBtn").addEventListener("click", () => setMode("start"));
 
+
 });
 export const tools = {
+
     graph: { button: document.getElementById("graphBtn"), editor: new GraphEditor(viewport, graph) },
     stop: { button: document.getElementById("stopBtn"), editor: new StopEditor(viewport, world) },
     crossing: { button: document.getElementById("crossingBtn"), editor: new CrossingEditor(viewport, world) },
     start: { button: document.getElementById("startBtn"), editor: new StartEditor(viewport, world) },
+
 };
 
 
@@ -58,9 +62,8 @@ function animate(){
     requestAnimationFrame(animate)
 }
 
-window.graph = graph; 
+// window.graph = graph; 
 window.ctx = ctx
-window.graph = graph;
 window.viewport = viewport;
 window.graphString = graphString
 window.graphInfo = graphInfo

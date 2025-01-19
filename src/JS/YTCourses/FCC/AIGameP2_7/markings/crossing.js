@@ -1,8 +1,8 @@
-import { add, scale, translate, perpendicular } from "../helpers/math/utils";
-import { Segment } from "../helpers/primitives/segment";
-import { angle } from "../helpers/math/utils";
-import { Envelope } from "../helpers/primitives/envelope";
-import { Marking } from "./marking";
+import { add, scale, translate, perpendicular } from "../helpers/math/utils.js";
+import { Segment } from "../helpers/primitives/segment.js";
+import { angle } from "../helpers/math/utils.js";
+import { Envelope } from "../helpers/primitives/envelope.js";
+import { Marking } from "./marking.js";
 
 export class Crossing extends Marking {
   constructor(center, directionVector, width, height) {

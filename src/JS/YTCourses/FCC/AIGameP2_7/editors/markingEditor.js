@@ -1,4 +1,4 @@
-import { getNearestSegment } from "../helpers/math/utils";
+import { getNearestSegment } from "../helpers/math/utils.js";
 
 
 export class MarkingEditor {

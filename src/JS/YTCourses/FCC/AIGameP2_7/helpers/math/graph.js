@@ -1,7 +1,7 @@
 // G = (V, E) Graph = (Node/Vertice, Link/Edge)
 
-import { Point } from "../primitives/point";
-import { Segment } from "../primitives/segment";
+import { Point } from "../primitives/point.js";
+import { Segment } from "../primitives/segment.js";
 
 export class Graph {
    constructor(points = [], segments = []) {

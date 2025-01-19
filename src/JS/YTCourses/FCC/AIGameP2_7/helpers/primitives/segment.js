@@ -1,5 +1,5 @@
-import { distance, subtract } from "../math/utils";
-import { normalize, dot, add, scale, magnitude } from "../math/utils";
+import { distance, subtract } from "../math/utils.js";
+import { normalize, dot, add, scale, magnitude } from "../math/utils.js";
 
 
 export class Segment {

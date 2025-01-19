@@ -1,6 +1,6 @@
-import { Start } from "../markings/start";
-import { MarkingEditor } from "./markingEditor";
-import { world } from "../main";
+import { Start } from "../markings/start.js";
+import { MarkingEditor } from "./markingEditor.js";
+import { world } from "../main.js";
 
 export class StartEditor extends MarkingEditor {
   constructor(viewport, world) {

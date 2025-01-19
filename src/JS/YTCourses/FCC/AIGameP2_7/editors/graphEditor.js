@@ -1,6 +1,6 @@
 // import { Point } from "../helpers/primitives/point";
-import { getNearestPoint } from "../helpers/math/utils";
-import { Segment } from "../helpers/primitives/segment";
+import { getNearestPoint } from "../helpers/math/utils.js";
+import { Segment } from "../helpers/primitives/segment.js";
 
 
 export class GraphEditor {

@@ -1,5 +1,5 @@
-import { angle } from "../helpers/math/utils"
-import { Marking } from "./marking"
+import { angle } from "../helpers/math/utils.js"
+import { Marking } from "./marking.js"
 
 
 export class Stop extends Marking {

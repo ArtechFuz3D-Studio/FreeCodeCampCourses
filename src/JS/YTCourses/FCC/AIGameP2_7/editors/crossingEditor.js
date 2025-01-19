@@ -1,6 +1,6 @@
-import { getNearestSegment } from "../helpers/math/utils";
-import { Crossing } from "../markings/crossing";
-import { MarkingEditor } from "./markingEditor";
+import { getNearestSegment } from "../helpers/math/utils.js";
+import { Crossing } from "../markings/crossing.js";
+import { MarkingEditor } from "./markingEditor.js";
 
 export class CrossingEditor extends MarkingEditor {
   constructor(viewport, world) {

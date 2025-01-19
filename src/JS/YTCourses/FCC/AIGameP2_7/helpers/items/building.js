@@ -1,5 +1,5 @@
-import { getFake3dPoint, average } from "../math/utils";
-import { Polygon } from "../primitives/polygon";
+import { getFake3dPoint, average } from "../math/utils.js";
+import { Polygon } from "../primitives/polygon.js";
 
 export class Building {
     constructor(poly, height = 200) {

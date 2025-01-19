@@ -1,6 +1,6 @@
-import { lerp, translate, lerp2D } from "../math/utils";
-import { Polygon } from "../primitives/polygon";
-import { getFake3dPoint } from "../math/utils";
+import { lerp, translate, lerp2D } from "../math/utils.js";
+import { Polygon } from "../primitives/polygon.js";
+import { getFake3dPoint } from "../math/utils.js";
 
 export class Tree {
     constructor(center, size, height = 200) {

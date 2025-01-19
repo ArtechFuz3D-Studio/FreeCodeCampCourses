@@ -1,6 +1,6 @@
-import { getNearestSegment } from "../helpers/math/utils";
-import { Stop } from "../markings/stop";
-import { MarkingEditor } from "./markingEditor";
+import { getNearestSegment } from "../helpers/math/utils.js";
+import { Stop } from "../markings/stop.js";
+import { MarkingEditor } from "./markingEditor.js";
 
 export class StopEditor extends MarkingEditor {
   constructor(viewport, world) {

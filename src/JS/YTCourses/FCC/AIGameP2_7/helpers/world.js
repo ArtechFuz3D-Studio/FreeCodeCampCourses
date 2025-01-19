@@ -1,10 +1,10 @@
-import { Envelope } from "./primitives/envelope"
-import { Polygon } from "./primitives/polygon"
-import { Segment } from "./primitives/segment"
-import { scale, add, lerp, distance } from "./math/utils"
-import { Point } from "./primitives/point"
-import { Building } from "./items/building"
-import { Tree } from "./items/tree"
+import { Envelope } from "./primitives/envelope.js"
+import { Polygon } from "./primitives/polygon.js"
+import { Segment } from "./primitives/segment.js"
+import { scale, add, lerp, distance } from "./math/utils.js"
+import { Point } from "./primitives/point.js"
+import { Building } from "./items/building.js"
+import { Tree } from "./items/tree.js"
 
 
 

@@ -1,5 +1,5 @@
-import { Polygon } from "./polygon"
-import { angle, subtract, translate } from "../math/utils"
+import { Polygon } from "./polygon.js"
+import { angle, subtract, translate } from "../math/utils.js"
 
 export class Envelope {
    constructor(skeleton, width, roundness = 1) {

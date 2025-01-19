@@ -1,4 +1,4 @@
-import { Point } from "../primitives/point"
+import { Point } from "../primitives/point.js"
 
 
 export function getNearestPoint(loc, points, threshold = Number.MAX_SAFE_INTEGER) {

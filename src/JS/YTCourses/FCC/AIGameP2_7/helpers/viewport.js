@@ -1,5 +1,5 @@
-import { Point } from "./primitives/point"
-import { add, subtract, scale } from "./math/utils";
+import { Point } from "./primitives/point.js"
+import { add, subtract, scale } from "./math/utils.js";
 
 export class Viewport {
    constructor(canvas) {
