@@ -25,6 +25,64 @@
     <h1>World Editor Lecture 7/11</h1>
 
 
+   
+
+    <img id="car" src="/AIGame/car.png">
+    <img id="car1" src="/AIGame/car1.webp">
+
+    <canvas id="myCanvas"></canvas>
+    <script type="module" src="./main.js"></script>
+
+    <script type="module" src="./helpers/world.js"></script>
+    <script type="module" src="./helpers/viewport.js"></script>
+
+    <script type="module" src="./markings/marking.js"></script>
+    <script type="module" src="./markings/stop.js"></script>
+    <script type="module" src="./markings/start.js"></script>
+    <script type="module" src="./markings/crossing.js"></script>
+    <script type="module" src="./markings/parking.js"></script>
+    <script type="module" src="./markings/light.js"></script>
+    <script type="module" src="./markings/target.js"></script>
+    <script type="module" src="./markings/yield.js"></script>
+
+    <script type="module" src="./editors/markingEditor.js"></script>
+    <script type="module" src="./editors/graphEditor.js"></script>
+    <script type="module" src="./editors/crossingEditor.js"></script>
+    <script type="module" src="./editors/stopEditor.js"></script>
+    <script type="module" src="./editors/startEditor.js"></script>
+    <script type="module" src="./editors/parkingEditor.js"></script>
+    <script type="module" src="./editors/lightEditor.js"></script>
+    <script type="module" src="./editors/targetEditor.js"></script>
+    <script type="module" src="./editors/yieldEditor.js"></script>
+
+    <script type="module" src="./helpers/items/tree.js"></script>
+    <script type="module" src="./helpers/items/building.js"></script>
+
+    <script type="module" src="./helpers/math/utils.js"></script>
+    <script type="module" src="./helpers/math/graph.js"></script>
+
+    <script type="module" src="./helpers/primitives/point.js"></script>
+    <script type="module" src="./helpers/primitives/segment.js"></script>
+    <script type="module" src="./helpers/primitives/polygon.js"></script>
+    <script type="module" src="./helpers/primitives/envelope.js"></script>
+    
+
+    <div id="controls3">
+        <button id="graphBtn" onclick="setMode('graph')">🌐</button>
+        <button id="stopBtn" onclick="setMode('stop')">🛑</button>
+        <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
+        <button id="crossingBtn" onclick="setMode('crossing')">🚶</button>
+        <button id="parkingBtn" onclick="setMode('parking')">🅿️</button>
+        <button id="lightBtn" onclick="setMode('light')">🚦</button>
+        <button id="startBtn" onclick="setMode('start')">🚙</button>
+        <button id="targetBtn" onclick="setMode('target')">🎯</button>
+    </div>
+    &nbsp;
+    <div id="controls2">
+        <button id="dispose">🗑️</button>
+        <button id="save">💾</button>
+    </div>
+    &nbsp;
     <div id="controls1">
         <button id="addpoint">Add Point
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -63,58 +121,6 @@
                 </svg>
             </button>
     </div>
-
-
-
-    &nbsp;
-    <div id="controls2">
-        <button id="dispose">🗑️</button>
-        <button id="save">💾</button>
-    </div>
-    &nbsp;
-    <div id="controls3">
-        <button id="graphBtn" onclick="setMode('graph')">🌐</button>
-        <button id="stopBtn" onclick="setMode('stop')">🛑</button>
-        <button id="crossingBtn" onclick="setMode('crossing')">🚶</button>
-        <button id="startBtn" onclick="setMode('start')">🚙</button>
-
-        <button id="yieldBtn" onclick="setMode('yield')">⚠️</button>
-        <button id="parkingBtn" onclick="setMode('parking')">🅿️</button>
-        <button id="lightBtn" onclick="setMode('light')">🚦</button>
-        <button id="targetBtn" onclick="setMode('target')">🎯</button>
-    </div>
-
-    <img id="car" src="/AIGame/car.png">
-    <img id="car1" src="/AIGame/car1.webp">
-
-    <canvas id="myCanvas"></canvas>
-    <script type="module" src="./main.js"></script>
-
-
-    <script type="module" src="./helpers/world.js"></script>
-    <script type="module" src="./helpers/items/tree.js"></script>
-    <script type="module" src="./helpers/items/building.js"></script>
-    <script type="module" src="./helpers/viewport.js"></script>
-
-
-    <script type="module" src="./markings/marking.js"></script>
-    <script type="module" src="./markings/stop.js"></script>
-    <script type="module" src="./markings/crossing.js"></script>
-    <script type="module" src="./markings/start.js"></script>
-
-    <script type="module" src="./editors/markingEditor.js"></script>
-    <script type="module" src="./editors/graphEditor.js"></script>
-    <script type="module" src="./editors/stopEditor.js"></script>
-    <script type="module" src="./editors/startEditor.js"></script>
-    <script type="module" src="./editors/crossingEditor.js"></script>
-
-    <script type="module" src="./helpers/math/utils.js"></script>
-    <script type="module" src="./helpers/math/graph.js"></script>
-    <script type="module" src="./helpers/primitives/point.js"></script>
-    <script type="module" src="./helpers/primitives/segment.js"></script>
-    <script type="module" src="./helpers/primitives/polygon.js"></script>
-    <script type="module" src="./helpers/primitives/envelope.js"></script>
-
 </body>
 
 </html>
