@@ -13,7 +13,7 @@
   }
   export function save(graph) {
     document.getElementById("save").addEventListener("click", () => {
-      localStorage.setItem("graph", JSON.stringify(graph));
+      localStorage.setItem("world", JSON.stringify(world));
     });
   }
 

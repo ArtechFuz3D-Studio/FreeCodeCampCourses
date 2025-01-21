@@ -5,6 +5,8 @@ import { scale, add, lerp, distance } from "./math/utils.js"
 import { Point } from "./primitives/point.js"
 import { Building } from "./items/building.js"
 import { Tree } from "./items/tree.js"
+import { Graph } from "./math/graph.js"
+
 
 
 
@@ -34,6 +36,23 @@ export class World {
       this.markings = []
 
       this.generate();
+   }
+
+   static load(info){
+      // return new World(Graph.load(info.graph))
+      const world = new World(new Graph())
+      world.graph = Graph.load(info.graph)
+      world.roadWidth = info.roadWidth;
+      world.roadRoundness = info.roadRoundness;
+      world.buildingWidth = info.buildingWidth;
+      world.buildingMinLength = info.buildingMinLength;
+      world.spacing = info.spacing;
+      world.treeSize = info.treeSize;
+      world.envelopes = info.envelopes.map((e) => Envelope.load(e))
+      world.roadBorders = info.roadBorders.map((b) => new Segment(b.p1, b.p2));
+      world.buildings = info.buildings.map((e) => Building.load(e));
+      
+      return world
    }
 
    generate() {

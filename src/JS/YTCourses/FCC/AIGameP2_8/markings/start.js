@@ -7,7 +7,7 @@ export class Start extends Marking {
 
     this.img = new Image();
     // this.img.src = "./car.png";
-    this.img.src = "./car1.webp";
+    this.img.src = "./assets/car.webp";
     // this.img.onload = () => console.log("Image loaded successfully.");
     // this.img.onerror = () =>
     //   console.error("Failed to load image:", this.img.src);

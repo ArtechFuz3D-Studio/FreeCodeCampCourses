@@ -17,12 +17,13 @@ myCanvas.height = 600
 
 export const ctx = myCanvas.getContext("2d")
 
-export const graphString = localStorage.getItem('graph')
-export const graphInfo = graphString ? JSON.parse(graphString) : null
-export const graph = graphInfo
-    ? Graph.load(graphInfo)
-    :  new Graph()
-export const world = new World(graph)
+export const worldString = localStorage.getItem('world')
+export const worldInfo = worldString ? JSON.parse(worldString) : null
+export const world = worldInfo
+ ? World.load(worldInfo) 
+ : new World(new Graph())
+export const graph = world.graph
+
 export const viewport = new Viewport(myCanvas)
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,8 +79,8 @@ function animate(){
 // window.graph = graph; 
 window.ctx = ctx
 window.viewport = viewport;
-window.graphString = graphString
-window.graphInfo = graphInfo
+window.worldString = worldString
+window.worldInfo = worldInfo
 window.world = world
 window.dispose = dispose;
 window.save = save;
