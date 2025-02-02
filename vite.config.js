@@ -65,6 +65,7 @@ export default defineConfig({
         ytCoursesFCCAIGameP2_1: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGameP2_1/index.html'),
         ytCoursesFCCAIGameP2_2: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGameP2_2/index.html'),
         contact: resolve(__dirname, 'src/Contact/index.html')
+
       }
       // input: {
       //   main: resolve(__dirname, 'index.html'),
