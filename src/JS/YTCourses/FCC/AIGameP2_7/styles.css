@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Audiowide&family=Bangers&family=Creepster&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=Orbitron:wght@400..900&family=Wavefont:wght@4..1000&family=Zen+Dots&display=swap");
+body {
+  background-color: black;
+  text-align: center;
+  display: flow-root;
+}
+
+h1 {
+  color: antiquewhite;
+  font-family: "Zen Dots";
+}
+
+#myCanvas {
+  background-color: chartreuse;
+}
+
+#controls3 button {
+  margin: auto;
+  background-color: rgb(255, 133, 219);
+  font-size: 20px;
+  padding: 5px 7px 7px 5px;
+  border-radius: 5px;
+  border: none;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+}
+#controls2 button {
+  margin: auto;
+  background-color: rgb(148, 255, 126);
+  font-size: 20px;
+  padding: 5px 7px 7px 5px;
+  border-radius: 5px;
+  border: none;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+}
+#controls1 button {
+  margin: 15px;
+  background-color: rgb(255, 188, 100);
+  font-size: 16px;
+  padding: 5px 7px 7px 5px;
+  border-radius: 5px;
+  border: none;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+}
+.zen-dots-regular {
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.audiowide-regular {
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* // <uniquifier> */
+/* // <weight> */
+
+.wavefont-uniquifier {
+  font-family: "Wavefont", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "ROND" 100, "YELA" -100;
+}
+
+.orbitron-uniquifier {
+  font-family: "Orbitron", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.noto-sans-canadian-aboriginal-uniquifier {
+  font-family: "Noto Sans Canadian Aboriginal", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.creepster-regular {
+  font-family: "Creepster", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bangers-regular {
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.alata-regular {
+  font-family: "Alata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#car1, #car {
+  display: none;
+}

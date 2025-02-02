@@ -20,7 +20,7 @@ export default defineConfig({
       // include all .js, .ts files
       'src/**/*.js',
 
-      // 'src/**/*.ts',
+      'src/**/*.ts',
     ],
   },
   build: {
@@ -62,7 +62,8 @@ export default defineConfig({
         ytCoursesFCCProAudioAIGame: resolve(__dirname, 'src/JS/YTCourses/FCC/ProAudio-AIGame/index.html'),
         ytCoursesFCCAIGame: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGame/index.html'),
         ytCoursesFCCAIGameP1_9: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGameP1_9/index.html'),
-
+        ytCoursesFCCAIGameP2_1: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGameP2_1/index.html'),
+        ytCoursesFCCAIGameP2_2: resolve(__dirname, 'src/JS/YTCourses/FCC/AIGameP2_2/index.html'),
         contact: resolve(__dirname, 'src/Contact/index.html')
 
       }
