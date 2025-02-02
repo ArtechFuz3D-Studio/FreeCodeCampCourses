@@ -1,0 +1,10 @@
+
+body {
+    text-align: center;
+}
+
+#mapType {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
